@@ -5,48 +5,36 @@ include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Main'
 	title= title
 block pagecontent
-	//- +mob-mnu()
-	
-	
-	+header()
+	//- +mob-mnu() 
 	+top-nav()
-	+topLine
-	.container
-		+in-c('radio', 'sdasdasdasd')
-		+in-c('radio', 'sdasdasdasd')
-	form
-		+input('fsdfs','tel')(required)
-		button  btn
-	+headerBlock
-
-	+soc()
-	+sForm()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		each item in items
-			li 
-				h2= item.title
-				p= item.text
-	//- +sContact()
-	
-	+footer()
+	+headerBlock.bg
+	main.main-block.container
+		+sCategories
+		+sAdvanteges
+		+sAbout
+		+sFor
+		+sLit
+		+sForm
+	+footer.bg()
       
 
 

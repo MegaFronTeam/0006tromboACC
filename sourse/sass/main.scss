@@ -33,7 +33,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/reboot";
 @import "./node_modules/bootstrap/scss/type";
 // @import "./node_modules/bootstrap/scss/images";
-@import "./node_modules/bootstrap/scss/containers";
+// @import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
 // @import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
@@ -114,5 +114,14 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';
 
+
+@import '../pug/blocks/sCategories/_sCategories';
+@import '../pug/blocks/sAdvanteges/_sAdvanteges';
+@import '../pug/blocks/sAbout/_sAbout';
+@import '../pug/blocks/sFor/_sFor';
+@import '../pug/blocks/sLit/_sLit';
+
 @import "media"; // Всегда в конце
+
+
 

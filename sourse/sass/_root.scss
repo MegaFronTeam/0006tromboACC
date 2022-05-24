@@ -1,5 +1,7 @@
 
+$gr: linear-gradient(325.87deg, $primary2 0%, #C2418F 51.57%, $primary 104.22%);
 :root {
+	--gr: #{$gr};
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
 
@@ -25,8 +27,24 @@
 		--swiperColorDefHover: var(--bs-primary);
 		--swiperBgDefHover: #ffffff;
 
+		--fancybox-bg: rgba(24, 24, 27, .77);
 
-	--fancybox-bg: rgba(24, 24, 27, .77);
+		--main-minus: 70px;
+		
+		--top-y:16px; 
+		@include media-breakpoint-up(lg) {
+			--top-h:64px;
+
+			--main-x: 80px;
+			--mdx: 48px;
+			--smx: 32px;
+		}
+		--main-x: 0;
+		--mdx: 16px;
+		--smx: 16px;
+
+		--cw: calc(100% - var(--main-x) * 2 );
+
 
 
 

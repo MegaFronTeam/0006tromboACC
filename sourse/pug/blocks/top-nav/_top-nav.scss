@@ -1,17 +1,38 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
-	}
 
+	--cx: var(--smx);
+	position: fixed;
+	z-index: 1200;
+	@extend .container;
+	@include media-breakpoint-down(lg) {
+		box-shadow: 0px 33px 244px rgba(0, 161, 227, 0.17), 0px 9.94853px 73.5589px rgba(0, 161, 227, 0.0921), 0px 4.13211px 30.5526px rgba(0, 161, 227, 0.1), 0px 1.4945px 11.0503px rgba(0, 161, 227, 0.1479);
+		width: calc(100% - 16px);
+		bottom: 8px;
+	}
+	transform: translateX(-50%);
+	padding-top: 7px;
+	padding-bottom: 7px;
 	@include media-breakpoint-up(lg) {
-		background-color: red;
+		// box-shadow: 0px 3px 4px rgba(0, 161, 227, 0.17), 0px 9.94853px 3.5589px rgba(0, 161, 227, 0.0921), 0px 1.13211px 2.5526px rgba(0, 161, 227, 0.1), 0px 1.4945px 11.0503px rgba(0, 161, 227, 0.1479);
+		top: var(--top-y);
+		padding-bottom: 0px;
+		padding-top: 0px;
 
 	}
-	p{
-		@include ell();
+	left: 50%;
+	background-color: #fff;
+	border-radius: 12px;
+	
+	&__logo{
+		font-weight: bold;
+		font-size: rem(18);
+	}
+	.row{
+		align-items: center;
+	}
+	&__btn{
+		@extend .btn, .btn-sm, .btn-primary;
+		width: rem(110);
 	}
 
 	@include media-breakpoint-up(md) {}

@@ -363,6 +363,11 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	const swipersCategories = new Swiper('.sCategories__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 8,
+		loop: true,
+	});
 	// modal window
 
 };

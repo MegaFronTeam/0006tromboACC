@@ -15,6 +15,8 @@ const JSCCommon = {
 			autoFocus: false,
 			groupAll: false,
 			groupAttr: false,
+			// showClass: "fancybox-throwOutUp",
+			// hideClass: "fancybox-throwOutDown",
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
@@ -360,6 +362,11 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 
+	});
+	const swipersCategories = new Swiper('.sCategories__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 8,
+		loop: true,
 	});
 	// modal window
 

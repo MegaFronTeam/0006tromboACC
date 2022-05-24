@@ -1,10 +1,15 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+img('img/bg.jpg','bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
+			.row.gx-0
+				.col-lg
+					h1 Тромбо АСС® снижает риск возникновения тромбов
+					+e.btn(href="#") О Тромбо АСС®
+				.col-lg-auto
+					picture 
+						source(media="(min-width:992px )", srcset="img/head-img.png")
+						img(src="img/head-img-mob.png", alt="")
 						
 	// end headerBlock
