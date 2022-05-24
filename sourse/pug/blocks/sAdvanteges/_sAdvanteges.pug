@@ -3,33 +3,7 @@ mixin sAdvanteges(data)
 	+b.sAdvanteges.section#sAdvanteges&attributes(attributes)
 		
 			+b.section-title.text-center
-				+b.animate-block.d-none.d-md-block
-					<svg width="824" height="824" viewBox="0 0 824 824" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g class="rotate rotate--2">
-							<ellipse rx="293.449" ry="258.427" transform="matrix(-0.97013 -0.242586 -0.244019 0.96977 400.732 418.713)" fill="#D70A42"/>
-						</g>
-						<g class="rotate rotate--3">
-							<ellipse rx="281.027" ry="246.091" transform="matrix(-0.968004 0.250933 0.252409 0.967621 398.611 413.393)" fill="#1E76E2"/>
-						</g>
-						<g filter="url(#filter0_d_2507_40027)">
-							<ellipse rx="259.25" ry="258.44" transform="matrix(-1 0 0 1 407.232 416.411)" fill="white"/>
-						</g>
-						<path class="rotate rotate--1" d="M197.051 597.702C241.054 645.782 307.002 665.712 378.106 659.014C449.21 652.315 525.437 618.985 589.912 560.59C654.388 502.195 694.877 429.817 708.233 360.02C721.59 290.224 707.812 223.042 663.809 174.963C619.806 126.883 553.857 106.952 482.753 113.651C411.649 120.349 335.423 153.679 270.947 212.074C206.471 270.469 165.983 342.848 152.626 412.644C139.27 482.44 153.047 549.622 197.051 597.702Z" stroke="#1E76E2"/>
-						<path class="rotate " d="M538.817 693.824C662.883 622.349 693.486 443.173 606.908 293.539C520.33 143.906 349.521 80.7638 225.455 152.238C101.39 223.713 70.7862 402.889 157.364 552.523C243.943 702.157 414.751 765.298 538.817 693.824Z" stroke="#D70A42"/>
-						<path  class="rotate rotate--4" d="M95.4125 377.568C74.2455 520.728 185.697 655.766 344.472 679.095C503.246 702.424 649.042 605.185 670.209 462.024C691.376 318.863 579.924 183.826 421.149 160.497C262.375 137.167 116.58 234.407 95.4125 377.568Z" stroke="#D70A42"/>
-						<defs>
-						<filter id="filter0_d_2507_40027" x="135.981" y="157.971" width="542.501" height="540.881" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-						<feOffset dy="12"/>
-						<feGaussianBlur stdDeviation="6"/>
-						<feComposite in2="hardAlpha" operator="out"/>
-						<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"/>
-						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2507_40027"/>
-						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2507_40027" result="shape"/>
-						</filter>
-						</defs>
-					</svg>
+				+b.animate-block.d-none.d-md-block(data-json='json/circle.json')
 				+e.center-text
 
 					h2 Тромбо АСС®

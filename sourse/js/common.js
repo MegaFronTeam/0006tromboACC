@@ -369,7 +369,17 @@ function eventHandler() {
 		loop: true,
 	});
 	// modal window
-
+	let animateBlocks = document.querySelectorAll("[data-json]");
+	for (const animateBlock of animateBlocks) { 
+		lottie.loadAnimation({
+			container: animateBlock, // the dom element that will contain the animation
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: animateBlock.dataset.json // the path to the animation json
+		});
+		
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
