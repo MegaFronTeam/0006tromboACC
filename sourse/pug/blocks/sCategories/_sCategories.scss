@@ -79,6 +79,7 @@
 .categories-item{
 	display: flex;
 	border-radius: 8px;
+	
 
 	@include media-breakpoint-down(sm) {
 		justify-content: space-between;
@@ -138,6 +139,10 @@
 		}
 	}
 	&__img-wrap{
+		svg{
+			width: 56px !important;
+			height: 56px  !important;
+		}
 		@include media-breakpoint-up(sm){
 			display: flex;
 			flex-direction: column;

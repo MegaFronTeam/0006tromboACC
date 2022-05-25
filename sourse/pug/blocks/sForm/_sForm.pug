@@ -1,9 +1,16 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
+	+b.sForm.section#sForm&attributes(attributes)
+		+e.inner.bg-wrap
+			+img("img/form-bg.jpg",'bg').picture-bg
 			.row
+				.col-xl-auto.col-md-7
+					picture 
+						source(media="(min-width:992px )", srcset="img/head-img.png")
+						img(src="img/head-img-mob.png", alt="")
+				.col
+					h2 Заказать или найти препарат  <br> Тромбо АСС<sup class="reg">&reg;</sup> в&nbsp;ближайшей аптеке легко и&nbsp;просто
+					p Тромбо АСС<sup class="reg">&reg;</sup> производится в&nbsp;Австрии, имеет доступную цену при неизменно высоком качестве
+					+e.btn(href="#")
+						span Заказать Тромбо АСС®
 	// end sForm

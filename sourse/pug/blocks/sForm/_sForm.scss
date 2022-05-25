@@ -1,7 +1,44 @@
 
 	// start .sForm
 	.sForm {
-		 
+		--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	h2{
+		@extend .h5;
+		font-weight: normal;
+	}
+	p{
+		font-size: 14px;
+		max-width: rem(290);
+		margin-left: auto;
+		margin-right: auto;
+	}
+		 &__inner{
+			@include media-breakpoint-up(xl) {
+
+				padding: 52px 63px 25px;
+			}
+			padding: 20px;
+					border-radius: var(--rad);
+					text-align: center;
+					overflow: hidden;
+					color: #fff;
+		 }
+		 &__btn{
+			 width: 100%;
+			 max-width: 296px;
+			 padding: 12px;
+			 @extend .btn, .btn-white;
+				span{
+						@extend .text-gr;
+				}
+		 }
+		 img:not(.picture-bg) {
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(10);
+			}
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

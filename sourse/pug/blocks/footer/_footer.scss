@@ -1,9 +1,88 @@
 .footer {
-		
+	color: #fff;
 	margin-top: auto;
-
+	padding-top: rem(110);
+	@include media-breakpoint-up(lg) {
+	padding-bottom: 48px;
+}
+padding-bottom: 68px;
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+	--cx: 30px;
+} 
+	&__row{
+		@include media-breakpoint-up(xl) {
+
+			--bs-gutter-x: 96px;
+		}
+		margin-bottom: 4px;
+	}
+	&__btn{
+		@extend .btn, .btn-white;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		background-color: rgba(255, 255, 255, 0.16);
+		border: none;
+		color: #fff;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+		.icon{
+			font-size: 1em;
+			margin-left: rem(16);
+		}
+	}
+	&__footer{
+		@include media-breakpoint-up(md){
+
+			padding-top: rem(30);
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+		}
+		.row{
+			align-items: center;
+			--bs-gutter-x: 6px;
+		}
+	}
+	&__copy{
+		opacity: 0.3;
+		font-size: 12px;
+	}
+	ul{
+		@include media-breakpoint-up(md) {
+
+			columns: 3;
+			margin-bottom: 1rem;
+		}
+		columns: 2;
+		margin-bottom: 2rem;
+	}
+	li {
+		list-style: none;
+		margin-bottom: rem(12);
+		max-width: 160px;
+		line-height: calc(1);
+		a{
+			color: #fff !important;
+			position: relative;
+			display: inline-block;
+			&:hover{
+				--sc: 1;
+			}
+			&::before{
+				content: '';
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: currentColor;
+				position: absolute;
+				transform-origin: left;
+				transform: scaleX(var(--sc, 0));
+				@include mt;
+			}
+		}
+	}
+
 
 @include media-breakpoint-up(lg) {}
 

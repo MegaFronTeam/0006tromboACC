@@ -1,8 +1,15 @@
 // start .sLit
 .sLit {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPT: #{rem(15)};
+	--sPB: #{rem(22)};
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1024px;
+	h2{
+		font-size: 14px;
+		font-weight: normal;
+	}
+	--sTPB: #{rem(16)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -16,6 +23,14 @@
 	}
 	&__item{
 
+	}
+	ol{
+		padding-left: rem(14);
+	}
+	li{
+		color: #999EAB;
+		font-size: 14px;
+		line-height: calc(18 / 14);
 	}
 
 	@include media-breakpoint-up(xl) {}

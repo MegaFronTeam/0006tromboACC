@@ -106,6 +106,7 @@ $dark: $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "white": $white,
   "primary": $primary,
   "primary2": $primary2,
   "secondary": $secondary,
@@ -406,7 +407,7 @@ $h1-font-size: rem(48) !default;
 $h2-font-size: $font-size-base * 2 !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: rem(20) !default;
 $h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables
 

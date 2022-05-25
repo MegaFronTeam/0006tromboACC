@@ -1,11 +1,13 @@
 
 $gr: linear-gradient(325.87deg, $primary2 0%, #C2418F 51.57%, $primary 104.22%);
 :root {
+
 	--gr: #{$gr};
 	--animate-delay: 1.2s;
-	--bs-body-font-size: #{$em-base};
-
+	--rad: 8px;
 	@include media-breakpoint-up(md) {
+		--bs-body-font-size: #{$em-base};
+		--rad: 20px;
 
 		--sPT: #{rem(80)};
 		--sPB: #{rem(90)};
@@ -32,11 +34,16 @@ $gr: linear-gradient(325.87deg, $primary2 0%, #C2418F 51.57%, $primary 104.22%);
 		--main-minus: 70px;
 		
 		--top-y:16px; 
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
+
+			--mdx: 48px;
+			--main-x: 80px;
+		}
+			@include media-breakpoint-up(lg) {
 			--top-h:64px;
 
-			--main-x: 80px;
-			--mdx: 48px;
+			--main-x: 60px;
+			--mdx: 40px;
 			--smx: 32px;
 		}
 		--main-x: 0;

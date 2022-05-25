@@ -1,7 +1,13 @@
 // start .sFor
 .sFor {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(912);
+	--sPT: #{rem(45)};
+	h2{
+		margin-bottom: rem(16);
+	}
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -16,6 +22,54 @@
 	}
 	&__item{
 
+	}
+	&__video{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 712px;
+		border-radius: var(--rad);
+		@include media-breakpoint-up(lg) {
+			--rad: 40px;
+		}
+		overflow: hidden;
+		@include block(712, 402);
+		margin-bottom: rem(60px);
+		iframe{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+	ul{
+		margin-bottom: 0;
+		@include media-breakpoint-up(md) {
+			columns: 2 ;
+		}
+		@include media-breakpoint-up(xl) {
+			column-gap: 10%;
+		}
+		// column-width: 390px;
+	}
+	li{
+		list-style: none;
+		position: relative;
+		padding-left: rem(28);
+		margin-bottom: rem(24);
+		max-width: rem(416);
+		line-height: calc(24 / 18);
+		&::before{
+			content: url(../img/svg/dot.svg);
+			position: absolute;
+			left: 0;
+			top: rem(4);
+		}
+	}
+	h2{
+		@extend .h5;
+		font-weight: 400;
+		color: $primary;
 	}
 
 	@include media-breakpoint-up(xl) {}

@@ -1,15 +1,51 @@
 // start .sAbout
 .sAbout {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(49)};
+	--sPB: #{rem(30)};
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1024px;
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	position: relative;
+	@include media-breakpoint-up(md) {
 
+		&::before,
+		&::after{
+			content: '';
+			z-index: -1;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 20px;
+			
+			
+		}
+		&::before{
+			border: 1px solid $primary;
+			top: 0;
+			left: 10px;
+		}
+		&::after{
+			border: 1px solid $primary2;
+			top: -15px;
+			left: -10px;
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(lg) {
+			
+			margin-bottom: rem(20);
+		}
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(88)};
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(20);
+
+		// margin-bottom: rem(80);
 	}
 	.section-title{
-		
 	}
 	&__col{
 
@@ -17,7 +53,57 @@
 	&__item{
 
 	}
+	h5{
+		color: $primary;
+	}
+	&__inner{
+		@include media-breakpoint-up(md) {
 
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 900px;
+		}
+		
+	}
+	&__banner{
+		@include media-breakpoint-down(md) {
+			padding-left: 32px;
+			padding-right: 32px;
+			text-align: center;
+		} 
+		// overflow: hidden;
+		.picture-bg {
+			border-radius: 20px;
+			
+		}
+		img:not(.picture-bg){
+			position: relative;
+			margin-top: -60px;
+			margin-right: -10px;
+			height: auto;
+			flex:  0 0 auto;
+		}
+		.sAbout__inner{ 
+			max-width: 960px;
+			display: flex;
+			// align-items: center;
+			justify-content: space-between;
+		}
+		h5{
+			color: #fff;
+			font-weight: normal;
+			@include media-breakpoint-up(md) {
+
+				max-width: 500px;
+			}
+			font-weight: normal;
+			align-self: center;
+			padding-top: 50px;
+			padding-bottom: 45px;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

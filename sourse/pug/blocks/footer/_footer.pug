@@ -1,9 +1,24 @@
 mixin footer()
-	+b.FOOTER.footer
+	+b.FOOTER.footer.bg-wrap
+		+img("img/footer-bg.jpg").picture-bg
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				+e.col.col
+					ul
+						li: a(href="#")  О Тромбо АСС®
+						li: a(href="#")  Неврологические нарушения
+						li: a(href="#")  Заболевания сердца
+						li: a(href="#")  Инфаркт  
+						li: a(href="#")  Инсульт
+						li: a(href="#")  Вопросы и ответы 
+						li: a(href="#")  Статьи
+						li: a(href="#")  Инструкция
+						li: a(href="#")  Где купить
+				.col-md-auto
+					+e.btn(href="#") Инструкция
+						+icon("download")
+			+e.footer
+				.row
+					.col-auto
+						img(src="img/svg/text.svg", alt="")
+					+e.copy.col-auto © Bausch Health (ООО «Бауш Хелс»)
