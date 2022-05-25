@@ -34,6 +34,8 @@
 		&__btn{
 			@extend .btn, .btn-primary;
 			padding: 10px 24px;
+			position: relative;
+			z-index: 4;
 			@include media-breakpoint-down(md) {
 				display: none;
 			}
@@ -44,6 +46,7 @@
 
 				@include a-cent1;
 				margin-top: -30px;
+				z-index: 4;
 			}
 		}
 	}
@@ -129,7 +132,7 @@
 		.sAdvanteges-item{
 			&__percent{
 				&::before{
-					--bg: url('../img/svg/red.svg')
+					--bg: url('../img/svg/red.png')
 				}
 				color: #fff;
 				// background: linear-gradient(325.87deg, #137EE7 0%, #C2418F 51.57%, #EF1A4D 104.22%);

@@ -13,7 +13,7 @@ mixin sAdvanteges(data)
 				
 			+e.center-block
 				mixin item(p,per)
-					+b.sAdvanteges-item
+					+b.sAdvanteges-item(data-aos="fade-up" data-aos-duration="1000")
 						+e.caption
 							p!= p 
 						+e.percent= per

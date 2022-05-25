@@ -2,20 +2,21 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
-			+mnu()
+			.container 
+				mixin item(t, j) 
+					+b.categories-item(href="#")&attributes(attributes) 
+						+e.title!= t  
+						+e.img-wrap(data-json= j)
+				+item(`Ишемический инсульт`,'json/insult.json').active
+				
+				+item(`Неврологические нарушения`,'json/nerv.json')
+					
+				+item(`Инфаркт миокарда `,'json/infarkt.json')
+				
+				+item(`Заболевания сердца`,'json/heart.json')
+				+mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -25,11 +26,8 @@ mixin top-nav()
 				+menu-toggle()
 			.col-lg.col-auto
 				+e.logo(href="/") Тромбо АСС®
-			.col-lg-auto.order-lg-0.order-last
-				.menu-mobile.menu-mobile--js
-					.menu-mobile__inner
-						+menu-toggle()
-						+mnu()
+			.col-lg-auto.order-lg-0.order-last.d-none.d-lg-block
+				+mnu()
 			.col-auto
 				+e.btn(href="#") Заказать
 	// end top-nav

@@ -13,6 +13,43 @@
 	</head>
 	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js">
+				<div class="menu-mobile__inner">
+					<div class="container"> 
+							<a class="categories-item active" href="#"> 
+								<div class="categories-item__title">Ишемический инсульт
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/insult.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Неврологические нарушения
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/nerv.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Инфаркт миокарда 
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/infarkt.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Заболевания сердца
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/heart.json">
+								</div>
+							</a>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О Тромбо АСС®</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Инструкция</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start top-nav-->
 			<div class="top-nav">
 				<div class="row">
@@ -24,19 +61,13 @@
 						<a class="top-nav__logo" href="/">Тромбо АСС®
 						</a>
 					</div>
-					<div class="col-lg-auto order-lg-0 order-last">
-						<div class="menu-mobile menu-mobile--js">
-							<div class="menu-mobile__inner">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-								</div>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О Тромбо АСС®</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Инструкция</a></li>
-								</ul>
-							</div>
-						</div>
+					<div class="col-lg-auto order-lg-0 order-last d-none d-lg-block">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О Тромбо АСС®</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Инструкция</a></li>
+						</ul>
 					</div>
 					<div class="col-auto">
 						<a class="top-nav__btn" href="#">Заказать
@@ -161,28 +192,28 @@
 						</div>
 					</div>
 					<div class="sAdvanteges__center-block">
-						<div class="sAdvanteges-item">
+						<div class="sAdvanteges-item" data-aos="fade-up" data-aos-duration="1000">
 							<div class="sAdvanteges-item__caption">
 								<p><span>Снижает риск</span> повторного инфаркта миокарда<sup>1</sup></p>
 							</div>
 							<div class="sAdvanteges-item__percent">-30%
 							</div>
 						</div>
-						<div class="sAdvanteges-item">
+						<div class="sAdvanteges-item" data-aos="fade-up" data-aos-duration="1000">
 							<div class="sAdvanteges-item__caption">
 								<p><span>Уменьшает риск</span> ишемического инсульта<sup>1</sup></p>
 							</div>
 							<div class="sAdvanteges-item__percent">-24%
 							</div>
 						</div>
-						<div class="sAdvanteges-item">
+						<div class="sAdvanteges-item" data-aos="fade-up" data-aos-duration="1000">
 							<div class="sAdvanteges-item__caption">
 								<p><span>Позволяет уменьшить риск</span>  повторных сердечно-сосудистых событий<sup>2,3</sup></p>
 							</div>
 							<div class="sAdvanteges-item__percent">-25%
 							</div>
 						</div>
-						<div class="sAdvanteges-item">
+						<div class="sAdvanteges-item" data-aos="fade-up" data-aos-duration="1000">
 							<div class="sAdvanteges-item__caption">
 								<p><span>Снижает риск</span> транзиторной ишемической атаки<sup>1</sup></p>
 							</div>
@@ -196,17 +227,17 @@
 				<div class="sAbout section" id="sAbout">
 					<div class="sAbout__inner">
 						<div class="sAbout__row row">
-							<div class="sAbout__col col-lg-6"> 
+							<div class="sAbout__col col-lg-6" data-aos="fade-up" data-aos-duration="1800">
 								<h5> Ацетилсалициловая кислота является действующим веществом препарата Тромбо<sup class="reg">&reg;</sup> АСС</h5>
 								<p>Тромбо<sup class="reg">&reg;</sup> АСС ингибирует действие фермента ЦОГ&nbsp;1, поэтому не&nbsp;образуется тромбоксан&nbsp;А2, который начинает процесс образования тромба. Благодаря тому, что тромбоксан А2&nbsp;не попадает в&nbsp;кровь, тромбоциты не&nbsp;активируются и&nbsp;не&nbsp;склеиваются, поэтому тромб не&nbsp;образуется</p>
 							</div>
-							<div class="sAbout__col col-lg-6"> 
+							<div class="sAbout__col col-lg-6" data-aos="fade-up" data-aos-duration="2400">
 								<h5> Тромбо<sup class="reg">&reg;</sup> АСС&nbsp;&mdash; препарат ацетилсалициловой кислоты в&nbsp;кишечнорастворимых таблетках</h5>
 								<p>для профилактики повторных сердечно-сосудистых катастроф (инфаркта миокарда, инсульта) и&nbsp;лечения стенокардии (формы ишемической болезни сердца)</p>
 							</div>
 						</div>
 					</div>
-					<div class="sAbout__banner bg-wrap">
+					<div class="sAbout__banner bg-wrap" data-aos="fade-up" data-aos-duration="2000">
 						<div class="sAbout__inner"><img class="picture-bg" src="img/banner-bg.jpg" alt="" loading="lazy"/>
 							<h5>Препарат Тромбо<sup class="reg">&reg;</sup> АСС выпускается в&nbsp;дозировках 50&nbsp;и&nbsp;100&nbsp;мг, которые подходят для длительного применения, производится в&nbsp;Австрии, имеет доступную цену при высоком качестве</h5>
 							<div class="d-none d-md-block"><img src="img/banner-img.png" alt="" loading="lazy"/>
@@ -217,23 +248,25 @@
 				<!-- end sAbout-->
 				<!-- start sFor-->
 				<section class="sFor section" id="sFor">
-					<div class="sFor__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/h-m07NluXbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> 
+					<div class="sFor__video" data-aos="fade-up" data-aos-duration="1000"><iframe width="560" height="315" src="https://www.youtube.com/embed/h-m07NluXbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> 
 					</div>
-					<h2>Тромбо® АСС применяется для</h2>
-					<ul>
-						<li>профилактики повторного инфаркта миокарда, повторного ишемического инсульта у&nbsp;пациентов, ранее перенесших нарушение мозгового кровообращения</li>
-						<li>лечения нестабильной и&nbsp;стабильной стенокардии</li>
-						<li>профилактики повторной транзиторной ишемической атаки (ТИА)</li>
-						<li>профилактики тромботических осложнений после операций и&nbsp;инвазивных вмешательств на&nbsp;сосудах (аортокоронарное шунтирование и&nbsp;др.)</li>
-					</ul>
+					<div data-aos="fade-up" data-aos-duration="2000">
+						<h2>Тромбо® АСС применяется для</h2>
+						<ul>
+							<li>профилактики повторного инфаркта миокарда, повторного ишемического инсульта у&nbsp;пациентов, ранее перенесших нарушение мозгового кровообращения</li>
+							<li>лечения нестабильной и&nbsp;стабильной стенокардии</li>
+							<li>профилактики повторной транзиторной ишемической атаки (ТИА)</li>
+							<li>профилактики тромботических осложнений после операций и&nbsp;инвазивных вмешательств на&nbsp;сосудах (аортокоронарное шунтирование и&nbsp;др.)</li>
+						</ul>
+					</div>
 				</section>
 				<!-- end sFor-->
 				<!-- start sLit-->
 				<section class="sLit section" id="sLit"> 
-					<div class="section-title">
+					<div class="section-title" data-aos="fade-up" data-aos-duration="2500">
 						<h2>Литература</h2>
 					</div>
-					<ol>
+					<ol data-aos="fade-up" data-aos-duration="3000">
 						<li>Газизов Р.М., Ацель Е.А. Применение ацетилсалициловой кислоты для первичной и&nbsp;вторичной профилактики сердечно-сосудистых заболеваний. РМЖ. Медицинское обозрение.&nbsp;2014;11:827-831.</li>
 						<li>Welsh R.C., Roe M.T., Steg P.G., et&nbsp;al. A&nbsp;critical reappraisal of&nbsp;aspirin for secondary prevention in&nbsp;patients with ischemic heart disease // Am. Heart J. &mdash;&nbsp;2016. &mdash;&nbsp;&#8470;&nbsp;181. &mdash;&nbsp;P. 92-100</li>
 						<li>Lotrionte&nbsp;M. et&nbsp;al. Which Aspirin Dose and Preparation Is&nbsp;Best for the Long-Term Prevention of&nbsp;Cardiovascular Disease and Cancer? Evidence From a&nbsp;Systematic Review and Network Meta-Analysis. Prog Cardiovasc Dis. Mar-Apr 2016;58(5):495-504</li>
@@ -242,7 +275,7 @@
 				<!-- end sLit-->
 				<!-- start sForm-->
 				<div class="sForm section" id="sForm">
-					<div class="sForm__inner bg-wrap"><img class="object-fit-js picture-bg" src="img/form-bg.jpg" alt="" loading="lazy"/>
+					<div class="sForm__inner bg-wrap" data-aos="fade-up" data-aos-duration="2000"><img class="object-fit-js picture-bg" src="img/form-bg.jpg" alt="" loading="lazy"/>
 						<div class="row">
 							<div class="col-xl-auto col-md-7">
 								<picture> 
@@ -319,11 +352,15 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/lottie-web/build/player/lottie.min.js"> </script>
+		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

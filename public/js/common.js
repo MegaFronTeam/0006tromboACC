@@ -306,6 +306,23 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
+	function setFixedMain() {
+		
+		let hh;
+		let fh;
+		
+		hh = document.querySelector(".headerBlock").offsetHeight;
+		fh = document.querySelector(".footer").offsetHeight;
+		document.documentElement.style.setProperty('--hh', `${hh}px`);
+		document.documentElement.style.setProperty('--fh', `${fh}px`);
+		let header = document.querySelector('.headerBlock');
+		let footer = document.querySelector('.footer');
+		if (!header) return;
+		window.scrollY > hh
+			? footer.classList.add('show')
+			: footer.classList.remove('show');
+	}
+
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
@@ -317,16 +334,20 @@ function eventHandler() {
 
 	function whenResize() {
 		setFixedNav();
+		setFixedMain();
 	}
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
+		setFixedMain();
 
 	}, { passive: true })
 	window.addEventListener('resize', () => {
 		whenResize();
+		setFixedMain();
 	}, { passive: true });
-
+	
+	setFixedMain();
 	whenResize();
 
 
@@ -380,6 +401,52 @@ function eventHandler() {
 		});
 		
 	}
+
+
+
+	let scroller = document.body;
+	gsap.registerPlugin(ScrollTrigger);
+	ScrollTrigger.defaults({
+		toggleActions: "restart pause resume pause"
+	});
+
+	let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin) => {
+		return gsap.timeline({
+
+			scrollTrigger: {
+				trigger: el,
+				scroller,
+				start,
+				end,
+				scrub,
+				pin,
+				// invalidateOnRefresh: true,
+				defaults: {
+					// ease: "power3",
+					// overwrite: true
+				}
+			}
+
+		})
+
+	}
+
+
+	
+	var t1 = gsapSet(".main-wrapper", 'top  top', '50% top', 1);
+	t1
+	.to(".headerBlock", { opacity: .2 })
+	.fromTo(".sAmericanContent--js  .sAmericanContent__wrap2", { opacity: 0 }, { opacity: 1 });
+	
+	// gsap.utils.toArray(" .sAdvanteges-item").forEach(wow => { 
+	// 	// const animate = wow.dataset.animate;
+	// 	var t2 = gsapSet(wow, 'top  bottom', 'top top', 1);
+	// 	t2 
+	// 		.from(wow, { y: '200%'});
+	// })
+	
+	AOS.init();
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

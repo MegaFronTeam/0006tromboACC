@@ -2,6 +2,12 @@
 	color: #fff;
 	margin-top: auto;
 	padding-top: rem(110);
+	z-index: 3;
+	&:not(.show){
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
 	@include media-breakpoint-up(lg) {
 	padding-bottom: 48px;
 }
@@ -23,8 +29,12 @@ padding-bottom: 68px;
 		display: flex;
 		justify-content: space-between;
 		background-color: rgba(255, 255, 255, 0.16);
-		border: none;
-		color: #fff;
+		border-color: rgba(255, 255, 255, 0.16);
+		&:hover{
+			border-color: #fff !important;
+			background-color: rgba(255, 255, 255, 0.16) !important;
+		}
+		color: #fff !important;
 		border-radius: 8px;
 		margin-bottom: 2rem;
 		.icon{
@@ -59,9 +69,12 @@ padding-bottom: 68px;
 	li {
 		list-style: none;
 		margin-bottom: rem(12);
-		max-width: 160px;
 		line-height: calc(1);
+		display: inline-block;
+		width: 100%;
+		
 		a{
+			max-width: 160px;
 			color: #fff !important;
 			position: relative;
 			display: inline-block;
