@@ -306,49 +306,7 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	function setFixedMain() {
-		
-		let hh;
-		let fh;
-		
-		hh = document.querySelector(".headerBlock").offsetHeight;
-		fh = document.querySelector(".footer").offsetHeight;
-		document.documentElement.style.setProperty('--hh', `${hh}px`);
-		document.documentElement.style.setProperty('--fh', `${fh}px`);
-		let header = document.querySelector('.headerBlock');
-		let footer = document.querySelector('.footer');
-		if (!header) return;
-		window.scrollY > hh
-			? footer.classList.add('show')
-			: footer.classList.remove('show');
-	}
 
-
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
-
-	function whenResize() {
-		setFixedNav();
-		setFixedMain();
-	}
-
-	window.addEventListener('scroll', () => {
-		setFixedNav();
-		setFixedMain();
-
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-		setFixedMain();
-	}, { passive: true });
-	
-	setFixedMain();
-	whenResize();
 
 
 	let defaultSl = {
@@ -461,3 +419,47 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+ 
+			function setFixedMain() {
+		
+				let hh;
+				let fh;
+				
+				hh = document.querySelector(".headerBlock").offsetHeight;
+				fh = document.querySelector(".footer").offsetHeight;
+				document.documentElement.style.setProperty('--hh', `${hh}px`);
+				document.documentElement.style.setProperty('--fh', `${fh}px`);
+				let header = document.querySelector('.headerBlock');
+				let footer = document.querySelector('.footer');
+				if (!header) return;
+				window.scrollY > hh * 1.2
+					? (document.body.classList.add('show-footer'))
+					: document.body.classList.remove('show-footer');
+			}
+
+
+			function setFixedNav() {
+				let topNav = document.querySelector('.top-nav  ');
+				if (!topNav) return;
+				window.scrollY > 0
+					? topNav.classList.add('fixed')
+					: topNav.classList.remove('fixed');
+			}
+
+			function whenResize() {
+				setFixedNav();
+				setFixedMain();
+			}
+
+			window.addEventListener('scroll', () => {
+				setFixedNav();
+				setFixedMain();
+
+			}, { passive: true })
+			window.addEventListener('resize', () => {
+				whenResize();
+				setFixedMain();
+			}, { passive: true });
+			
+			setFixedMain();
+			whenResize();

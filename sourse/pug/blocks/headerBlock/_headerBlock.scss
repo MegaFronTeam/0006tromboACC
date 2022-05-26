@@ -1,5 +1,13 @@
 // start .headerBlock
 .headerBlock { 
+	[data-json] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100% !important;
+		height: 100% !important			;
+	}
 	@include media-breakpoint-up(lg) {
 
 		--sPT: calc(93px + var(--top-y) + var(--top-h) );

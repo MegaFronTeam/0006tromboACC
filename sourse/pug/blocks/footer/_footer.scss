@@ -1,12 +1,25 @@
+body:not(.show-footer) {
+	.footer{
+
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+}
 .footer {
 	color: #fff;
 	margin-top: auto;
 	padding-top: rem(110);
 	z-index: 3;
-	&:not(.show){
-		opacity: 0;
-		visibility: hidden;
+	.animate-block{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100% !important;
+		height: 100% !important;
 		z-index: -1;
+	}
+	&:not(.show){
 	}
 	@include media-breakpoint-up(lg) {
 	padding-bottom: 48px;
