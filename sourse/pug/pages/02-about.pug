@@ -1,0 +1,62 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Main'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1 О&nbsp;Тромбо АСС<sup class="reg">&reg;</sup>
+	main.main-block.container
+		.inner-sp-x
+			.main-title(data-aos="fade-up" data-aos-duration="1000")
+				h2 О препарате
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				p Тромбо АСС<sup class="reg">&reg;</sup>&nbsp;&mdash; препарат для профилактики повторных неврологических и&nbsp;сердечно&nbsp;&mdash; сосудистых событий (после перенесенного инсульта, транзиторной ишемической атаки, инфаркта миокарда, операций на&nbsp;сосудах) и&nbsp;лечения заболеваний сердца на&nbsp;основе ацетилсалициловой кислоты в&nbsp;кишечнорастворимых таблетках.
+			.mb-32(data-aos="fade-up" data-aos-duration="1000")
+				p.text-center.text-primary Тромбообразование является пусковым механизмом развития неврологических нарушений и&nbsp;сердечно-сосудистых заболеваний
+			+b.img-banner.border-block(data-aos="fade-up" data-aos-duration="1000")
+				+img("img/man.jpg").bg
+				+block-icons()
+					
+					//- +item(`Заболевания сердца`,'json/heart.json')
+			+b.custom-list--stethoscope.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				ul
+					li  Действующим веществом препарата Тромбо АСС<sup class="reg">&reg;</sup> является ацетилсалициловая кислота
+					li  Тромбо АСС<sup class="reg">&reg;</sup> уменьшает образование тромбов за&nbsp;счет воздействия ацетилсалициловой кислоты на&nbsp;тромбоксан А2&nbsp;путем ингибирования (остановки) синтеза фермента ЦОГ 1&nbsp;Таким образом, не&nbsp;образуется тромбоксан&nbsp;А2, который запускает процесс образования тромбов
+					li  Благодаря тому, что тромбоксан А2&nbsp;не попадает в&nbsp;кровь, тромбоциты не&nbsp;активируются и&nbsp;не&nbsp;склеиваются, реакция не&nbsp;запускается и&nbsp;тромб не&nbsp;образуется
+			+sSteps
+		//- +sCategories
+		//- +sAdvanteges
+		//- +sAbout
+		hr.bg-primary(data-aos="fade-up" data-aos-duration="1000").d-none.d-md-block
+		+sFor2
+		+sLit
+		+sForm
+	+footer.bg()
+      
+
+
+

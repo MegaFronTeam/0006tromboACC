@@ -120,6 +120,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sAbout/_sAbout';
 @import '../pug/blocks/sFor/_sFor';
 @import '../pug/blocks/sLit/_sLit';
+@import '../pug/blocks/sSteps/_sSteps';
 
 @import "media"; // Всегда в конце
 

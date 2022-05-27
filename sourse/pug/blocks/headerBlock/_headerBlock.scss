@@ -1,4 +1,14 @@
 // start .headerBlock
+body:not(.main-page) {
+	.headerBlock { 
+		text-align: center;
+		h1{
+
+			max-width: none;
+			width: auto;
+		}
+	}
+}
 .headerBlock { 
 	[data-json] {
 		position: absolute;
@@ -11,10 +21,10 @@
 	@include media-breakpoint-up(lg) {
 
 		--sPT: calc(93px + var(--top-y) + var(--top-h) );
-		--sPB: calc(83px + var(--main-minus));
+		--sPB: calc(83px - var(--main-minus));
 	}
 	--sPT: 33px;
-	--sPB: calc(15px + var(--main-minus));
+	--sPB: calc(15px - var(--main-minus));
 	.container{
 
 		--cx: 54px;

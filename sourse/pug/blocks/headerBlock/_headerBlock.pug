@@ -4,13 +4,16 @@ mixin headerBlock()
 		+img('img/bg.jpg','bg').picture-bg
 		div(data-json="json/circles/data.json")
 		.container
-			.row.gx-0
-				.col-lg
-					h1 Тромбо АСС® снижает риск возникновения тромбов
-					+e.btn(href="#") О Тромбо АСС®
-				.col-lg-auto
-					picture 
-						source(media="(min-width:992px )", srcset="img/head-img.png")
-						img(src="img/head-img-mob.png", alt="")
-						
+			if block
+				block
+			else
+				.row.gx-0
+					.col-lg
+						h1 Тромбо АСС® снижает риск возникновения тромбов
+						+e.btn(href="#") О Тромбо АСС®
+					.col-lg-auto
+						picture 
+							source(media="(min-width:992px )", srcset="img/head-img.png")
+							img(src="img/head-img-mob.png", alt="")
+							
 	// end headerBlock

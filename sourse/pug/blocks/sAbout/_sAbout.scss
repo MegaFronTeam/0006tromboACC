@@ -7,6 +7,9 @@
 	max-width: 1024px;
 	// --sTPB: #{rem()};
 	position: relative;
+	h5{
+		font-weight: normal;
+	}
 	@include media-breakpoint-up(md) {
 
 		&::before,

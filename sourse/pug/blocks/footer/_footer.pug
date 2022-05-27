@@ -1,7 +1,7 @@
 mixin footer()
 	+b.FOOTER.footer.bg-wrap
-		+img("img/footer-bg.jpg").picture-bg
-		+b.animate-block.d-none.d-md-block(data-json="json/circles/data.json")
+		+img("img/footer-bg.jpg",'bg').picture-bg
+		+b.animate-block(data-json="json/circles/data.json")
 		.container
 			+e.row.row
 				+e.col.col

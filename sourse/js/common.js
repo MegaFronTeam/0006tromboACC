@@ -1,4 +1,25 @@
 "use strict";
+
+const convertImages = (query, callback) => {
+	const images = document.querySelectorAll(query);
+
+	images.forEach(image => {
+		fetch(image.src)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+				if (image.id) svg.id = image.id;
+				if (image.className) svg.classList = image.classList;
+
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error))
+	});
+}
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -289,7 +310,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -394,7 +415,7 @@ function eventHandler() {
 	var t1 = gsapSet(".main-wrapper", 'top  top', '50% top', 1);
 	t1
 	.to(".headerBlock", { opacity: .2 })
-	.fromTo(".sAmericanContent--js  .sAmericanContent__wrap2", { opacity: 0 }, { opacity: 1 });
+	// .fromTo(".sAmericanContent--js  .sAmericanContent__wrap2", { opacity: 0 }, { opacity: 1 });
 	
 	// gsap.utils.toArray(" .sAdvanteges-item").forEach(wow => { 
 	// 	// const animate = wow.dataset.animate;
@@ -404,6 +425,8 @@ function eventHandler() {
 	// })
 	
 	AOS.init();
+
+	convertImages('.img-to-svg')
 
 };
 if (document.readyState !== 'loading') {

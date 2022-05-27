@@ -52,6 +52,7 @@
 		}
 		// column-width: 390px;
 	}
+	// --icon: ; 
 	li{
 		list-style: none;
 		position: relative;
@@ -59,12 +60,6 @@
 		margin-bottom: rem(24);
 		max-width: rem(416);
 		line-height: calc(24 / 18);
-		&::before{
-			content: url(../img/svg/dot.svg);
-			position: absolute;
-			left: 0;
-			top: rem(4);
-		}
 	}
 	h2{
 		@extend .h5;

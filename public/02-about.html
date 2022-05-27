@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Main</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth < 767.98 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=1200,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js">
+				<div class="menu-mobile__inner">
+					<div class="container"> 
+							<a class="categories-item active" href="#"> 
+								<div class="categories-item__title">Ишемический инсульт
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/insult.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Неврологические нарушения
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/nerv.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Инфаркт миокарда 
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/infarkt.json">
+								</div>
+							</a>
+							<a class="categories-item" href="#"> 
+								<div class="categories-item__title">Заболевания сердца
+								</div>
+								<div class="categories-item__img-wrap" data-json="json/heart.json">
+								</div>
+							</a>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О Тромбо АСС®</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Инструкция</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start top-nav-->
+			<div class="top-nav">
+				<div class="row">
+					<div class="col d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
+					</div>
+					<div class="col-lg col-auto">
+						<a class="top-nav__logo" href="/">Тромбо АСС®
+						</a>
+					</div>
+					<div class="col-lg-auto order-lg-0 order-last d-none d-lg-block">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О Тромбо АСС®</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Инструкция</a></li>
+						</ul>
+					</div>
+					<div class="col-auto">
+						<a class="top-nav__btn" href="#">Заказать
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- end top-nav-->
+			<!-- start headerBlock-->
+			<div class="headerBlock section bg-wrap bg" id="headerBlock"><img class="object-fit-js picture-bg" src="img/bg.jpg" alt="" loading="lazy"/>
+				<div data-json="json/circles/data.json"></div>
+				<div class="container">
+					<div class="text-center">
+						<h1>О&nbsp;Тромбо АСС<sup class="reg">&reg;</sup></h1>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<main class="main-block container">
+				<div class="inner-sp-x">
+					<div class="main-title" data-aos="fade-up" data-aos-duration="1000">
+						<h2>О препарате</h2>
+					</div>
+					<div class="mb-40" data-aos="fade-up" data-aos-duration="1000">
+						<p>Тромбо АСС<sup class="reg">&reg;</sup>&nbsp;&mdash; препарат для профилактики повторных неврологических и&nbsp;сердечно&nbsp;&mdash; сосудистых событий (после перенесенного инсульта, транзиторной ишемической атаки, инфаркта миокарда, операций на&nbsp;сосудах) и&nbsp;лечения заболеваний сердца на&nbsp;основе ацетилсалициловой кислоты в&nbsp;кишечнорастворимых таблетках.</p>
+					</div>
+					<div class="mb-32" data-aos="fade-up" data-aos-duration="1000">
+						<p class="text-center text-primary">Тромбообразование является пусковым механизмом развития неврологических нарушений и&nbsp;сердечно-сосудистых заболеваний</p>
+					</div>
+					<div class="img-banner border-block" data-aos="fade-up" data-aos-duration="1000"><img class="bg" src="img/man.jpg" alt="" loading="lazy"/>
+						<div class="blog-icons">
+							<div class="blog-icons__item">
+								<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/insylt.svg" alt=""/>
+								</div>
+							</div>
+							<div class="blog-icons__item">
+								<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/nerv.svg" alt=""/>
+								</div>
+							</div>
+							<div class="blog-icons__item">
+								<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/ifarkt.svg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="custom-list custom-list--stethoscope mb-40" data-aos="fade-up" data-aos-duration="1000">
+						<ul>
+							<li> Действующим веществом препарата Тромбо АСС<sup class="reg">&reg;</sup> является ацетилсалициловая кислота</li>
+							<li> Тромбо АСС<sup class="reg">&reg;</sup> уменьшает образование тромбов за&nbsp;счет воздействия ацетилсалициловой кислоты на&nbsp;тромбоксан А2&nbsp;путем ингибирования (остановки) синтеза фермента ЦОГ 1&nbsp;Таким образом, не&nbsp;образуется тромбоксан&nbsp;А2, который запускает процесс образования тромбов</li>
+							<li> Благодаря тому, что тромбоксан А2&nbsp;не попадает в&nbsp;кровь, тромбоциты не&nbsp;активируются и&nbsp;не&nbsp;склеиваются, реакция не&nbsp;запускается и&nbsp;тромб не&nbsp;образуется</li>
+						</ul>
+					</div>
+					<!-- start sSteps-->
+					<div class="sSteps section" id="sSteps">
+						<div class="tabs">
+							<div class="tabs__caption d-none d-md-flex" data-aos="fade-up" data-aos-duration="1000">
+								<div class="tabs__btn active"><span>1</span>
+									<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+										<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+										<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+										<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+										<g filter="url(#filter0_d_2064_27712)">
+											<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+										</g>
+										<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+										<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+										<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+										<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+										<defs>
+											<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+												<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+												<feoffset dy="3.74971"></feoffset>
+												<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+												<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+												<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+												<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+												<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+											</filter>
+											<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#000673"></stop>
+												<stop offset="0.3404" stop-color="#0044FF"></stop>
+												<stop offset="0.3658" stop-color="#004DFF"></stop>
+												<stop offset="0.5129" stop-color="#007AFF"></stop>
+												<stop offset="0.654" stop-color="#009EFF"></stop>
+												<stop offset="0.7859" stop-color="#00B7FF"></stop>
+												<stop offset="0.905" stop-color="#00C7FF"></stop>
+												<stop offset="1" stop-color="#00CCFF"></stop>
+											</lineargradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="tabs__btn"><span>2</span>
+									<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+										<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+										<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+										<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+										<g filter="url(#filter0_d_2064_27712)">
+											<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+										</g>
+										<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+										<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+										<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+										<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+										<defs>
+											<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+												<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+												<feoffset dy="3.74971"></feoffset>
+												<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+												<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+												<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+												<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+												<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+											</filter>
+											<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#000673"></stop>
+												<stop offset="0.3404" stop-color="#0044FF"></stop>
+												<stop offset="0.3658" stop-color="#004DFF"></stop>
+												<stop offset="0.5129" stop-color="#007AFF"></stop>
+												<stop offset="0.654" stop-color="#009EFF"></stop>
+												<stop offset="0.7859" stop-color="#00B7FF"></stop>
+												<stop offset="0.905" stop-color="#00C7FF"></stop>
+												<stop offset="1" stop-color="#00CCFF"></stop>
+											</lineargradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="tabs__btn"><span>3</span>
+									<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+										<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+										<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+										<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+										<g filter="url(#filter0_d_2064_27712)">
+											<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+										</g>
+										<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+										<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+										<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+										<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+										<defs>
+											<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+												<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+												<feoffset dy="3.74971"></feoffset>
+												<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+												<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+												<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+												<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+												<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+											</filter>
+											<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#000673"></stop>
+												<stop offset="0.3404" stop-color="#0044FF"></stop>
+												<stop offset="0.3658" stop-color="#004DFF"></stop>
+												<stop offset="0.5129" stop-color="#007AFF"></stop>
+												<stop offset="0.654" stop-color="#009EFF"></stop>
+												<stop offset="0.7859" stop-color="#00B7FF"></stop>
+												<stop offset="0.905" stop-color="#00C7FF"></stop>
+												<stop offset="1" stop-color="#00CCFF"></stop>
+											</lineargradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="tabs__btn"><span>4</span>
+									<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+										<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+										<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+										<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+										<g filter="url(#filter0_d_2064_27712)">
+											<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+										</g>
+										<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+										<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+										<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+										<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+										<defs>
+											<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+												<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+												<feoffset dy="3.74971"></feoffset>
+												<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+												<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+												<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+												<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+												<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+											</filter>
+											<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#000673"></stop>
+												<stop offset="0.3404" stop-color="#0044FF"></stop>
+												<stop offset="0.3658" stop-color="#004DFF"></stop>
+												<stop offset="0.5129" stop-color="#007AFF"></stop>
+												<stop offset="0.654" stop-color="#009EFF"></stop>
+												<stop offset="0.7859" stop-color="#00B7FF"></stop>
+												<stop offset="0.905" stop-color="#00C7FF"></stop>
+												<stop offset="1" stop-color="#00CCFF"></stop>
+											</lineargradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="tabs__btn"><span>5</span>
+									<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+										<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+										<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+										<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+										<g filter="url(#filter0_d_2064_27712)">
+											<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+										</g>
+										<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+										<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+										<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+										<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+										<defs>
+											<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+												<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+												<feoffset dy="3.74971"></feoffset>
+												<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+												<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+												<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+												<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+												<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+											</filter>
+											<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#000673"></stop>
+												<stop offset="0.3404" stop-color="#0044FF"></stop>
+												<stop offset="0.3658" stop-color="#004DFF"></stop>
+												<stop offset="0.5129" stop-color="#007AFF"></stop>
+												<stop offset="0.654" stop-color="#009EFF"></stop>
+												<stop offset="0.7859" stop-color="#00B7FF"></stop>
+												<stop offset="0.905" stop-color="#00C7FF"></stop>
+												<stop offset="1" stop-color="#00CCFF"></stop>
+											</lineargradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="tabs__wrap">
+										<div class="tabs__content active">
+											<div class="tabs__btn d-md-none"><span>1</span>
+												<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+													<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+													<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+													<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+													<g filter="url(#filter0_d_2064_27712)">
+														<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+													</g>
+													<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+													<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+													<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+													<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+													<defs>
+														<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+															<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+															<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+															<feoffset dy="3.74971"></feoffset>
+															<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+															<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+															<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+															<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+															<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+														</filter>
+														<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#000673"></stop>
+															<stop offset="0.3404" stop-color="#0044FF"></stop>
+															<stop offset="0.3658" stop-color="#004DFF"></stop>
+															<stop offset="0.5129" stop-color="#007AFF"></stop>
+															<stop offset="0.654" stop-color="#009EFF"></stop>
+															<stop offset="0.7859" stop-color="#00B7FF"></stop>
+															<stop offset="0.905" stop-color="#00C7FF"></stop>
+															<stop offset="1" stop-color="#00CCFF"></stop>
+														</lineargradient>
+													</defs>
+												</svg>
+											</div>
+											<div class="row">
+												<div class="col-md-6" data-aos="fade-up" data-aos-duration="1000"> 
+													<div class="sSteps__img-wrap"><img src="img/step-img-1.svg" alt="" loading="lazy"/>
+														<div class="blog-icons">
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/insylt.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/nerv.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/ifarkt.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md" data-aos="fade-up" data-aos-duration="1000">
+													<p>Это кровеносный сосуд. Все наше тело пронизано сетью кровеносных сосудов, образующих кровеносную систему. По&nbsp;этим эластичным трубчатым образованиям осуществляется перемещение крови по&nbsp;организму. </p>
+													<p>От&nbsp;сердца кровь движется по&nbsp;артериям, артериолам и&nbsp;артериальным капиллярам, а&nbsp;к&nbsp;сердцу- по&nbsp;венозным капиллярам, венулам и&nbsp;венам. Кровь, текущая по&nbsp;кровеносным сосудам, состоит из&nbsp;жидкой среды- плазмы и&nbsp;форменных элементов- лейкоцитов, эритроцитов и&nbsp;тромбоцитов.</p>
+													<p>Все компоненты крови все время контактируют с&nbsp;тончайшим слоем клеток, выстилающих сосуд,- интимой.</p>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__btn d-md-none"><span>2</span>
+												<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+													<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+													<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+													<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+													<g filter="url(#filter0_d_2064_27712)">
+														<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+													</g>
+													<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+													<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+													<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+													<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+													<defs>
+														<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+															<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+															<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+															<feoffset dy="3.74971"></feoffset>
+															<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+															<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+															<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+															<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+															<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+														</filter>
+														<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#000673"></stop>
+															<stop offset="0.3404" stop-color="#0044FF"></stop>
+															<stop offset="0.3658" stop-color="#004DFF"></stop>
+															<stop offset="0.5129" stop-color="#007AFF"></stop>
+															<stop offset="0.654" stop-color="#009EFF"></stop>
+															<stop offset="0.7859" stop-color="#00B7FF"></stop>
+															<stop offset="0.905" stop-color="#00C7FF"></stop>
+															<stop offset="1" stop-color="#00CCFF"></stop>
+														</lineargradient>
+													</defs>
+												</svg>
+											</div>
+											<div class="row">
+												<div class="col-md-6" data-aos="fade-up" data-aos-duration="1000"> 
+													<div class="sSteps__img-wrap"><img src="img/step-img-2.svg" alt="" loading="lazy"/>
+														<div class="blog-icons">
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/insylt.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/nerv.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/ifarkt.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md" data-aos="fade-up" data-aos-duration="1000">
+													<p>В&nbsp;норме клетки интимы выделяют в&nbsp;кровь множество веществ, регулирующих тонус сосуда, текучесть крови и&nbsp;процессы воспаления.</p>
+													<p>При повреждении интимы, например, вследствие ранения, хирургического вмешательства, установки катетера, атеросклеротического поражения а&nbsp;также повышенного давления, курения или стресса, клетки начинают выделят в&nbsp;кровь вещества, запускающие процесс образования тромбов.</p>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__btn d-md-none"><span>3</span>
+												<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+													<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+													<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+													<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+													<g filter="url(#filter0_d_2064_27712)">
+														<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+													</g>
+													<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+													<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+													<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+													<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+													<defs>
+														<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+															<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+															<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+															<feoffset dy="3.74971"></feoffset>
+															<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+															<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+															<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+															<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+															<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+														</filter>
+														<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#000673"></stop>
+															<stop offset="0.3404" stop-color="#0044FF"></stop>
+															<stop offset="0.3658" stop-color="#004DFF"></stop>
+															<stop offset="0.5129" stop-color="#007AFF"></stop>
+															<stop offset="0.654" stop-color="#009EFF"></stop>
+															<stop offset="0.7859" stop-color="#00B7FF"></stop>
+															<stop offset="0.905" stop-color="#00C7FF"></stop>
+															<stop offset="1" stop-color="#00CCFF"></stop>
+														</lineargradient>
+													</defs>
+												</svg>
+											</div>
+											<div class="row">
+												<div class="col-md-6" data-aos="fade-up" data-aos-duration="1000"> 
+													<div class="sSteps__img-wrap"><img src="img/step-img-3.svg" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="col-md" data-aos="fade-up" data-aos-duration="1000">
+													<p>Как происходит процесс тромбообразования?</p>
+													<p>Клетки интимы постоянно выделяют арахидоновую кислоту, которая при повреждении сосуда с&nbsp;помщью фермента циклооксигеназы&nbsp;1 (ЦОГ-1) стимулирует в&nbsp;тромбоцитах выработку тромбоксана А2. Это приводит к&nbsp;сужению сосудов, повышению артериального давления в&nbsp;сосуде и&nbsp;активирует агрегацию ( то&nbsp;есть &laquo;склеивание&raquo;) тромбоцитов.</p>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__btn d-md-none"><span>4</span>
+												<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+													<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+													<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+													<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+													<g filter="url(#filter0_d_2064_27712)">
+														<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+													</g>
+													<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+													<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+													<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+													<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+													<defs>
+														<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+															<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+															<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+															<feoffset dy="3.74971"></feoffset>
+															<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+															<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+															<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+															<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+															<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+														</filter>
+														<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#000673"></stop>
+															<stop offset="0.3404" stop-color="#0044FF"></stop>
+															<stop offset="0.3658" stop-color="#004DFF"></stop>
+															<stop offset="0.5129" stop-color="#007AFF"></stop>
+															<stop offset="0.654" stop-color="#009EFF"></stop>
+															<stop offset="0.7859" stop-color="#00B7FF"></stop>
+															<stop offset="0.905" stop-color="#00C7FF"></stop>
+															<stop offset="1" stop-color="#00CCFF"></stop>
+														</lineargradient>
+													</defs>
+												</svg>
+											</div>
+											<div class="row">
+												<div class="col-md-6" data-aos="fade-up" data-aos-duration="1000"> 
+													<div class="sSteps__img-wrap"><img src="img/step-img-4.svg" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="col-md" data-aos="fade-up" data-aos-duration="1000">
+													<p>&laquo;Прилипание&raquo; тромбоцитов к&nbsp;поврежденной интиме сосуда и&nbsp;склеивание их&nbsp;между собой и&nbsp;начинают сложный процесс тромбообразования, состоящий из&nbsp;нескольких этапов. Под воздействием факторов свертывания образуется нерастворимый белок фибрин, нити которого &laquo;укрепляют&raquo; тромбоцитарную массу (1). Кстати, именно по&nbsp;появлению первых нитей фибрина и&nbsp;определяют время свертывания крови в&nbsp;лаборатории. В&nbsp;сети фибрина попадают другие тромбоциты и&nbsp;форменные элементы крови (2), затем от&nbsp;кровяного сгустка отделяется жидкая часть крови и&nbsp;образуется зрелый тромб (3). Именно он&nbsp;закрывает повреждение сосудистой стенки. </p>
+													<p>Важно понимать, что тромбообразование- это нормальная защитная реакция организма. Именно за&nbsp;счет нее при порезах и&nbsp;других травмах кровотечение быстро останавливается- тромб закрывает дефект стенки сосуда.&nbsp;в&nbsp;дальнейшем клетки интимы восстанавливаются и&nbsp;закрывают брешь, а&nbsp;образованный тромб растворяется (лизируется).</p>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__btn d-md-none"><span>5</span>
+												<svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M78.4283 38.6532C74.0438 38.6532 68.9016 38.4799 65.2748 33.3786C61.8134 28.5098 59.9778 25.0526 57.6597 22.8295C55.1213 20.3951 50.9676 18.434 49.583 17.7578" stroke="#2344B7" stroke-width="1.24989"></path>
+													<path d="M78.9539 37.7849C78.8101 37.7849 76.7976 37.7849 75.36 37.7849C72.1255 37.7849 71.299 38.8857 70.1489 42.4421C68.7114 46.8876 66.7348 53.8735 64.0394 44.3473C61.344 34.8212 62.0987 28.6421 58.8283 24.0009C55.5578 19.3598 50.2749 17.0392 48.0107 16.1953" stroke="#D70A42" stroke-width="1.24989"></path>
+													<path opacity="0.37" d="M75.4424 38.2387L78.0078 38.4658C78.1366 38.466 78.201 38.746 78.2009 38.886C78.2008 39.166 78.0075 39.3057 78.0075 39.3057L75.4421 39.0786C68.0961 39.0672 63.5193 44.2394 59.0715 49.1318C54.4947 54.164 50.5814 59.1524 42.9777 59.1406C38.8465 59.1341 32.7676 58.0243 33.6283 58.0257C44.4997 58.0426 54.4305 53.464 58.9428 48.4317C63.3907 43.3993 68.032 38.2272 75.4424 38.2387Z" fill="url(#paint0_linear_2064_27712)"></path>
+													<ellipse rx="23.8963" ry="20.9103" transform="matrix(0.968055 0.250737 -0.252607 0.967569 39.0452 35.1223)" fill="#1E76E2"></ellipse>
+													<g filter="url(#filter0_d_2064_27712)">
+														<ellipse cx="39.0395" cy="34.9533" rx="22.0405" ry="21.9533" fill="#D70A42"></ellipse>
+													</g>
+													<path d="M54.275 52.0512C46.2778 60.8036 31.0703 60.2368 20.2765 50.4448C9.48256 40.6529 7.49341 25.6194 15.4906 16.867C23.4878 8.11455 38.6953 8.68142 49.4892 18.4734C60.2831 28.2653 62.2722 43.2988 54.275 52.0512Z" stroke="#1E76E2" stroke-width="1.24989"></path>
+													<path d="M27.3976 58.4438C17.208 52.5841 14.5657 37.7659 21.8253 25.2416C29.085 12.7172 43.2901 7.58741 53.4797 13.4471C63.6694 19.3068 66.3117 34.125 59.052 46.6493C51.7924 59.1737 37.5873 64.3035 27.3976 58.4438Z" stroke="#D70A42" stroke-width="1.24989"></path>
+													<ellipse cx="78.0355" cy="37.3919" rx="1.96421" ry="1.95631" fill="#1E76E2"></ellipse>
+													<ellipse cx="78.0353" cy="37.3893" rx="1.09093" ry="1.08654" fill="white"></ellipse>
+													<defs>
+														<filter id="filter0_d_2064_27712" x="13.2493" y="13" width="51.5805" height="51.4057" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+															<feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+															<fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+															<feoffset dy="3.74971"></feoffset>
+															<fegaussianblur stdDeviation="1.87486"></fegaussianblur>
+															<fecomposite in2="hardAlpha" operator="out"></fecomposite>
+															<fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.194805 0 0 0 0.2 0"></fecolormatrix>
+															<feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2064_27712"></feblend>
+															<feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2064_27712" result="shape"></feblend>
+														</filter>
+														<lineargradient id="paint0_linear_2064_27712" x1="131.758" y1="48.9824" x2="42.0572" y2="48.9533" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#000673"></stop>
+															<stop offset="0.3404" stop-color="#0044FF"></stop>
+															<stop offset="0.3658" stop-color="#004DFF"></stop>
+															<stop offset="0.5129" stop-color="#007AFF"></stop>
+															<stop offset="0.654" stop-color="#009EFF"></stop>
+															<stop offset="0.7859" stop-color="#00B7FF"></stop>
+															<stop offset="0.905" stop-color="#00C7FF"></stop>
+															<stop offset="1" stop-color="#00CCFF"></stop>
+														</lineargradient>
+													</defs>
+												</svg>
+											</div>
+											<div class="row">
+												<div class="col-md-6" data-aos="fade-up" data-aos-duration="1000"> 
+													<div class="sSteps__img-wrap"><img src="img/step-img-5.svg" alt="" loading="lazy"/>
+														<div class="blog-icons">
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/insylt.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/nerv.svg" alt=""/>
+																</div>
+															</div>
+															<div class="blog-icons__item">
+																<div class="blog-icons__img-wrap"><img class="img-to-svg" src="img/svg/ifarkt.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md" data-aos="fade-up" data-aos-duration="1000">
+													<p>Но&nbsp;не&nbsp;все так однозначно, и&nbsp;когда процесс тромбообразования становится бесконтрольным ( при различных патологических процессах в&nbsp;организме- воспалении сосудистой стенки, атеросклерозе), это может привести к&nbsp;опаснейшим последствиям. Например, закупорка артерий сердца может вызвать инфаркт миокарда, а&nbsp;головного мозга- инсульт.</p>
+													<p>Что может помочь в&nbsp;таком случае? Ацетилсалициловая кислота.</p>
+												</div>
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+					<!-- end sSteps-->
+				</div>
+				<hr class="bg-primary d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
+				<!-- start sFor-->
+				<section class="sFor section custom-list custom-list--tablet" id="sFor">
+					<div class="mb-40" data-aos="fade-up" data-aos-duration="2000">
+						<h2>Тромбо® АСС применяется для</h2>
+						<ul>
+							<li>Профилактики повторного инфаркта миокарда, повторного ишемического инсульта у&nbsp;пациентов, ранее перенесших нарушение мозгового кровообращения</li>
+							<li>Лечения нестабильной и&nbsp;стабильной стенокардии</li>
+							<li>Профилактики повторной транзиторной ишемической атаки (ТИА)</li>
+							<li>Профилактики тромботических осложнений после операций и&nbsp;инвазивных вмешательств на&nbsp;сосудах (аортокоронарное шунтирование и&nbsp;др.)</li>
+						</ul>
+					</div>
+					<div class="mb-40" data-aos="fade-up" data-aos-duration="2000">
+						<h2>Отличие препарата Тромбо<sup class="reg">&reg;</sup> АСС от&nbsp;других препаратов ацетилсалициловой кислоты</h2>
+						<ul>
+							<li>Таблетки Тромбо АСС<sup class="reg">&reg;</sup> являются кишечнорастворимыми, что позволяет снизить воздействие ацетилсалициловой кислоты на&nbsp;слизистую желудка и&nbsp;уменьшить риск побочных эффектов</li>
+							<li>Препарат выпускается в&nbsp;дозировках 50&nbsp;и&nbsp;100&nbsp;мг, которые подходят для длительного применения</li>
+							<li>Тромбо АСС<sup class="reg">&reg;</sup> производится в&nbsp;Австрии, имеет доступную цену при высоком качестве производства</li>
+						</ul>
+					</div>
+				</section>
+				<!-- end sFor-->
+				<!-- start sLit-->
+				<section class="sLit section" id="sLit"> 
+					<div class="section-title" data-aos="fade-up" data-aos-duration="2500">
+						<h2>Литература</h2>
+					</div>
+					<ol data-aos="fade-up" data-aos-duration="3000">
+						<li>Газизов Р.М., Ацель Е.А. Применение ацетилсалициловой кислоты для первичной и&nbsp;вторичной профилактики сердечно-сосудистых заболеваний. РМЖ. Медицинское обозрение.&nbsp;2014;11:827-831.</li>
+						<li>Welsh R.C., Roe M.T., Steg P.G., et&nbsp;al. A&nbsp;critical reappraisal of&nbsp;aspirin for secondary prevention in&nbsp;patients with ischemic heart disease // Am. Heart J. &mdash;&nbsp;2016. &mdash;&nbsp;&#8470;&nbsp;181. &mdash;&nbsp;P. 92-100</li>
+						<li>Lotrionte&nbsp;M. et&nbsp;al. Which Aspirin Dose and Preparation Is&nbsp;Best for the Long-Term Prevention of&nbsp;Cardiovascular Disease and Cancer? Evidence From a&nbsp;Systematic Review and Network Meta-Analysis. Prog Cardiovasc Dis. Mar-Apr 2016;58(5):495-504</li>
+					</ol>
+				</section>
+				<!-- end sLit-->
+				<!-- start sForm-->
+				<div class="sForm section" id="sForm">
+					<div class="sForm__inner bg-wrap" data-aos="fade-up" data-aos-duration="2000"><img class="object-fit-js picture-bg" src="img/form-bg.jpg" alt="" loading="lazy"/>
+						<div class="row">
+							<div class="col-xl-auto col-md-7">
+								<picture> 
+									<source media="(min-width:992px )" srcset="img/head-img.png"/><img src="img/head-img-mob.png" alt=""/>
+								</picture>
+							</div>
+							<div class="col">
+								<h2>Заказать или найти препарат  <br> Тромбо АСС<sup class="reg">&reg;</sup> в&nbsp;ближайшей аптеке легко и&nbsp;просто</h2>
+								<p>Тромбо АСС<sup class="reg">&reg;</sup> производится в&nbsp;Австрии, имеет доступную цену при неизменно высоком качестве</p>
+								<a class="sForm__btn" href="#"><span>Заказать Тромбо АСС®</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sForm-->
+			</main>
+			<footer class="footer bg-wrap"><img class="object-fit-js picture-bg" src="img/footer-bg.jpg" alt="" loading="lazy"/>
+				<div class="animate-block" data-json="json/circles/data.json">
+				</div>
+				<div class="container">
+					<div class="footer__row row">
+						<div class="footer__col col">
+							<ul>
+								<li><a href="#"> О Тромбо АСС®</a></li>
+								<li><a href="#"> Неврологические нарушения</a></li>
+								<li><a href="#"> Заболевания сердца</a></li>
+								<li><a href="#"> Инфаркт  </a></li>
+								<li><a href="#"> Инсульт</a></li>
+								<li><a href="#"> Вопросы и ответы </a></li>
+								<li><a href="#"> Статьи</a></li>
+								<li><a href="#"> Инструкция</a></li>
+								<li><a href="#"> Где купить</a></li>
+							</ul>
+						</div>
+						<div class="col-md-auto">
+							<a class="footer__btn" href="#">Инструкция
+								<svg class="icon icon-download ">
+									<use xlink:href="img/svg/sprite.svg#download"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__footer">
+						<div class="row">
+							<div class="col-auto"><img src="img/svg/text.svg" alt=""/></div>
+							<div class="footer__copy col-auto">© Bausch Health (ООО «Бауш Хелс»)
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit"> 
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/lottie-web/build/player/lottie.min.js"> </script>
+		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

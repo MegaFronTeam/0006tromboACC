@@ -31,7 +31,7 @@ $gr: linear-gradient(325.87deg, $primary2 0%, #C2418F 51.57%, $primary 104.22%);
 
 		--fancybox-bg: rgba(24, 24, 27, .77);
 
-		--main-minus: 70px;
+		
 		
 		--top-y:16px; 
 		@include media-breakpoint-up(xl) {
@@ -52,11 +52,16 @@ $gr: linear-gradient(325.87deg, $primary2 0%, #C2418F 51.57%, $primary 104.22%);
 
 		--cw: calc(100% - var(--main-x) * 2 );
 
-
-		--mt: -69px;
 		--mb: -36px;
-
-		--hh:584px; --fh:368px;
+		--mt: -353px;
+		
+		--main-minus: var(--mt);
+		.main-page {
+			--mt: -69px;
+			--main-minus: var(--mt);
+		}
+		--hh:584px; 
+		--fh:368px;
 
 
 

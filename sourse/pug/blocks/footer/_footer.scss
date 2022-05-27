@@ -9,7 +9,7 @@ body:not(.show-footer) {
 .footer {
 	color: #fff;
 	margin-top: auto;
-	padding-top: rem(110);
+	padding-top: calc(rem(74) - var(--mb));
 	z-index: 3;
 	.animate-block{
 		position: absolute;
