@@ -538,10 +538,28 @@ h1{
 		height: calc(100% + 2px);
 		@include mt;
 		opacity: var(--op, 0);
-
+		
 	}
 	&:hover{
 		--op:1;
+		color: #fff;
+	}
+}
+.btn-outline-primary{
+	color: #000;
+	// border: none;
+	&::after{
+		content: '';
+		@include a-cent;
+		border-radius: inherit;
+		background-color: #fff;
+		z-index: -1;
+		@include mt;
+		opacity: var(--op2, 1);
+	}
+	--op:1;
+	&:hover{
+		--op2:0;
 	}
 }
 
@@ -776,6 +794,31 @@ h5{
 			[fill="rgb(242,185,201)"]{
 				fill: #fff !important;
 			}
+		}
+
+	}
+}
+
+.btns-block{
+	@include roww(16px,m);
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 22px;
+	&__btn{
+		margin-bottom: 10px;
+		justify-content: space-between;
+		@extend .btn, .btn-outline-primary;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 20px;
+		border-radius: 8px;
+		flex-grow: 1;
+		&::after{
+			border-radius: 6px;
+		}
+		.icon{
+			font-size: 24px;
 		}
 
 	}
