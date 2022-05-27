@@ -21,14 +21,14 @@ block variables
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Main'
+	- let  title= 'О Тромбо АСС®'
 	title= title
 block pagecontent
 	+mob-mnu() 
 	+top-nav()
 	+headerBlock.bg
 		.text-center
-			h1 О&nbsp;Тромбо АСС<sup class="reg">&reg;</sup>
+			h1= title
 	main.main-block.container
 		.inner-sp-x
 			.main-title(data-aos="fade-up" data-aos-duration="1000")

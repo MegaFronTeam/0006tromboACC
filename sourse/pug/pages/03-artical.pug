@@ -1,0 +1,144 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Заболевания сердца'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1= title
+	main.main-block.container
+		.inner-sp-x
+			.main-title(data-aos="fade-up" data-aos-duration="1000")
+				h2 Заголовок H2
+			
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Заголовок H3
+				h4 Заголовок H4
+				h5 Заголовок H5
+				h6.text-primary Заголовок H6
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				p #[span.text-primary Cтенокардия] – форма ишемической болезни сердца (ИБС), которая проявляется болью или ощущением дискомфорта в грудной клетке. Симптомы стенокардии обусловлены дисбалансом между потребностью сердечной мышцы в кислороде и его доставкой. Основная причина стенокардии – атеросклероз артерий, питающих миокард. Симптоматика стенокардии может отличаться у разных пациентов, но нужно знать хотя бы ее наиболее типичную клиническую картину, ведь ранняя диагностика ИБС и своевременно начатое лечение значительно улучшат прогноз течения заболевания.
+			+b.img-banner.border-block(data-aos="fade-up" data-aos-duration="1000")
+				+img("img/depositphotos_199713720-stock-photo-mature-woman-suffering-depression-grey.jpg").bg 
+			+b.custom-list(data-aos="fade-up" data-aos-duration="2000").mb-40.column-2
+				h6.text-primary Особенно внимательно следует отнестись к таким сигналам тем, у кого:
+				ul
+					li Гипертоническая болезнь
+					li Атеросклероз
+					li Сахарный диабет
+					li Повышенная свертываемость крови, тромбофилия
+					li Избыточная масса тела
+					li При приеме гормональных препаратов
+					li Остеохондроз шейного отдела позвоночника
+					li Нарушение сердечного ритма, ишемическая болезнь, искусственные клапаны сердца, перенесенный эндокардит
+			.mb-40
+				p.text-primary.text-md-center(data-aos="fade-up" data-aos-duration="1000") Причинами считаются ухудшение здоровья населения в целом
+				.row.gy-3.justify-content-center
+					mixin item(t)
+						.col-xl.col-md-4.text-md-center.d-md-block.d-flex.align-items-center(data-aos="fade-up" data-aos-duration="1000")
+							.col-md.col-auto
+								+b.circle-block
+									img(src="img/eye.svg", alt="").res-i
+							.col
+								h4.fw-400.mb-0!= t
+					+item(`Резкая нарастающая головная боль/головокружение`)
+					+item(`Онемение части лица, руки или ноги`)
+					+item(`Ухудшение зрения, вспышки или черные точки, потемнение в&nbsp;глазах`)
+					+item(`Повышение артериального давления`)
+					+item(`Раздражение на&nbsp;яркий свет или громкие звуки`)
+			
+		+b.stat-block.text-center.text-white.bg.mb-40
+			h2.mb-2 450 000
+			p случаев инсульта
+			.mb-3 
+				+icon("favorite")
+				+icon("favorite")
+				+icon("favorite")
+				+icon("favorite-border")
+			p Заподозрить стенокардию и&nbsp;обратиться к&nbsp;кардиологу для диагностики необходимо в&nbsp;любом из&nbsp;трех случаев:
+		+b.line-group.row.px-1.align-items-center.mb-40(data-aos="fade-up" data-aos-duration="1000")
+			.col-md-auto.order-md-1.text-center
+				img(src="img/tromb.png", alt="").mb-3
+			.col 
+				p Ограничение кровотока в коронарных артериях при атеросклерозе обусловлено формированием атеросклеротической бляшки, которая сужает просвет сосуда. На поздних стадиях атеросклероза происходит «дестабилизация бляшки»: на ее поверхности образуются эрозии и трещины, что запускает механизм образования тромба.
+		+b.line-group.row.px-1.align-items-center.mb-40(data-aos="fade-up" data-aos-duration="1000")
+			.col-md-auto.text-center
+				img(src="img/heart-pain.png", alt="").mb-3
+			.col
+				p При формировании тромба процесс обретает острое течение – стабильная стенокардия трансформируется в нестабильную, либо развивается инфаркт миокарда. Поэтому у пациентов с факторами риска инфаркта миокарда применяют препараты, препятствующие тромбообразованию, к которым относится в том числе и Тромбо АСС®.  После перенесенного инфаркта на месте его очага формируется рубцовая ткань (кардиосклероз), нарушается сократительная способность сердечной мышцы, что ведет к сердечной недостаточности и аритмиям. Конечно, проявление этих последствий зависит от размера зоны инфаркта, адекватности лечении и профилактики осложнений, общего состояния организма.
+
+		.custom-list.mb-40(data-aos="fade-up" data-aos-duration="1000")
+			ul
+				li Но&nbsp;основные подходы в&nbsp;лечении направлены на&nbsp;восстановление кровотока в&nbsp;коронарных артериях (с&nbsp;помощью лекарств, расширяющих сосуды, стентирования или шунтирования) и&nbsp;профилактику дальнейшего прогрессирования ИБС (лекарства, снижающие уровень холестерина, препятствующие тромбообразованию).
+				li При наличии отягощающих заболеваний, таких как сахарный диабет, гипертония и др., необходимо их адекватное лечение. Только в комплексе эти меры будут эффективными, поэтому придерживайтесь курсу терапии, назначенной Вашим врачом.
+				li Для профилактики сердечно-сосудистых осложнений всем пациентам со&nbsp;стабильной ИБС в&nbsp;качестве ингибитора агрегации тромбоцитов МЗ&nbsp;РФ&nbsp;рекомендуется применение ацетилсалициловой кислоты (АСК) 75-100&nbsp;мг в&nbsp;сутки
+				li АСК остается самым распространенным и&nbsp;доступным ингибитором агрегации тромбоцитов и&nbsp;при отсутствии противопоказаний должна быть назначена всем больным со&nbsp;стабильной ИБС
+			.mb-40
+				p.text-primary.text-md-center(data-aos="fade-up" data-aos-duration="1000") Регулярный прием небольших доз АСК
+				.row.gy-3.justify-content-center
+					mixin item(s,t, pr)
+						.col-lg-3.col-md-4.text-md-center.d-md-block.d-flex.align-items-center(data-aos="fade-up" data-aos-duration="1000")
+							.col-md.col-sm-auto.col-3
+								+b.circle-block= pr
+							.col
+								h4.fw-400.mb-0
+									span.text-primary.d-md-block.d-inline-block= s 
+									|  
+									!= t
+					+item('Снижает риск',`ишемического инсульта`,'-24%') 
+					+item(' Снижает риск',`нефатального инсульта `,'-19%') 
+					+item('Снижает риск ',`транзиторной ишемической атаки `,'-19%') 
+		.border-block.custom-list.p-32.mb-40(data-aos="fade-up" data-aos-duration="1000")
+			.row
+				.col-lg-6 
+					p Фармацевтическая промышленность предлагает сегодня 3 варианта модификации лекарственных форм АСК для профилактического применения: 
+					ul
+						li обычные таблетки;
+						li кишечнорастворимые;
+						li комбинированные препараты АСК с антацидами.
+				.col-lg-6 
+					p По сравнению с другими формами именно кишечнорастворимая форма АСК в исследованиях показывает безопасность, сопоставимую с плацебо. Один из препаратов этой группы — Тромбо АСС® — содержит АСК в оптимальных дозировках: 50 мг и 100 мг 
+		+sLit
+			li Фонякин А.В. Ацетилсалициловая кислота в&nbsp;лечении и&nbsp;профилактике ишемического инсульта. РМЖ. 2013;30:1567.
+			li Косарев В.В., Бабанов С.А. Клиническая фармакология современных антиагрегантов и&nbsp;их&nbsp;место в&nbsp;фармакотерапии ишемической болезни сердца и&nbsp;ассоциированных состояний. РМЖ. Кардиология.&nbsp;2013;21(27):1378-1383.
+			li Инструкция по&nbsp;применению лекарственного препарата Тромбо АСС<sup class="reg">&reg;</sup>. Рег. номер: П &#8470;&nbsp;013722/01 от&nbsp;01.11.2011.
+			li Рафальский В.В., Крикова А.В., Багликов А.Н. Особенности клинической фармакологии ацетилсалициловой кислоты как антитромботического препарата. Кардиоваскулярная терапия и&nbsp;профилактика.&nbsp;2009;8(7):1-8.
+			li Garcia Rodriguez L.A., Hernandez-Diaz&nbsp;S., de&nbsp;Abajo F.J. Association between aspirin and upper gastrointestinal complications: systematic review of&nbsp;epidemiologic studies. Br&nbsp;J&nbsp;Clin Pharmacol.&nbsp;2001;52:563-571.
+			li Kubler&nbsp;W., Darius H. Primare Prevention der koronaren Herzkrankheit mit Aspirin. Z&nbsp;Kardiol.&nbsp;2005;93:66-73.
+			li Газизов Р.М., Ацель Е.А. Применение ацетилсалициловой кислоты для первичной и&nbsp;вторичной профилактики сердечно-сосудистых заболеваний. РМЖ. Медицинское обозрение.&nbsp;2014;11:827-831.
+			li Rothwel Р.М. еt&nbsp;al. Effects of&nbsp;aspirin on&nbsp;risk and severity of&nbsp;early recurrent stroke after transient ischaemic attack and ischaemic stroke: time-course analysis of&nbsp;randomised trials. Lancet.&nbsp;2016;388:365-375.
+			li Kong T.et al. Aspirin reduced recurrent stroke risk in&nbsp;patients with lacunar stroke. Acta Neurol Scand.&nbsp;2019;140(1):78-83.
+			li Ишемический инсульт и&nbsp;транзиторная ишемическая атака у&nbsp;взрослых: клин. рек. МЗ&nbsp;РФ, 2020.
+			li Kernan W.N. Guidelines for the Prevention of&nbsp;Stroke in&nbsp;Patients With Stroke and Transient Ischemic Attack. A&nbsp;Guideline for Healthcare Professionals From the American Heart Association/American Stroke Association. Stroke.&nbsp;2014;45:2160-2236.
+			li Федеральная служба государственной статистики. Естественное движение населения. URL: http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/population/demography/#
+		+btns
+
+		+sForm
+	+footer.bg()
+      
+
+
+

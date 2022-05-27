@@ -1,6 +1,6 @@
 mixin sFor(data)
 	// start sFor
-	+b.SECTION.sFor.section#sFor&attributes(attributes)
+	+b.SECTION.sFor.custom-list.section#sFor&attributes(attributes)
 		
 		+e.video(data-aos="fade-up" data-aos-duration="1000")
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/h-m07NluXbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> 
@@ -28,4 +28,18 @@ mixin sFor2(data)
 				li Таблетки Тромбо АСС<sup class="reg">&reg;</sup> являются кишечнорастворимыми, что позволяет снизить воздействие ацетилсалициловой кислоты на&nbsp;слизистую желудка и&nbsp;уменьшить риск побочных эффектов
 				li Препарат выпускается в&nbsp;дозировках 50&nbsp;и&nbsp;100&nbsp;мг, которые подходят для длительного применения
 				li Тромбо АСС<sup class="reg">&reg;</sup> производится в&nbsp;Австрии, имеет доступную цену при высоком качестве производства
+	// end sFor
+mixin sFor3(data)
+	// start sFor
+	+b.SECTION.sFor.section.custom-list.pt-0.mw-none&attributes(attributes) 
+		div(data-aos="fade-up" data-aos-duration="2000")
+			h2() Особенно внимательно следует отнестись к таким сигналам тем, у кого:
+			ul
+				li Гипертоническая болезнь
+				li Атеросклероз
+				li Сахарный диабет
+				li Повышенная свертываемость крови, тромбофилия
+				li При приеме гормональных препаратов
+				li Остеохондроз шейного отдела позвоночника
+				li Нарушение сердечного ритма, ишемическая болезнь, искусственные клапаны сердца, перенесенный эндокардит
 	// end sFor
