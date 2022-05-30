@@ -1,0 +1,79 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Вопросы и ответы'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1= title
+	main.main-block.container
+		.inner-sp-x
+			+b.news-btns.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				+e.btn(href="#").active Все
+				+e.btn(href="#") Инсульт
+				+e.btn(href="#") Инфаркт
+			+b.news-wrap.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				+e.row.row
+					mixin newsItem(i, t)
+						.col-lg-4.col-sm-6
+							+e.news-item(href="#")
+								+e.img-wrap
+									+img(`img/news-img-${i}.jpg`, 'bg')
+								+e.content
+									h4!= t
+									+e.show-more Подробнее
+										+icon('chevron-right')
+					+newsItem(1, "Ацетилсалициловая кислота и цена времени")
+					+newsItem(2, "Пульс после инсульта")
+					+newsItem(3, "Как распознать инсульт")
+					+newsItem(4, "Как избежать инфаркта миокарда")
+					+newsItem(5, "Как уберечь себя от инфаркта и инсульта")
+					+newsItem(6, "Таблетки Тромбо АСС® 100мг, инструкция")
+					.col-lg-4.col-sm-6
+							+e.news-item(href="#")
+								+e.img-wrap
+									+img(`img/news-img-7.jpg`, 'bg')
+								+e.content
+									h4 Таблетки Тромбо АСС® 50мг, инструкцияt #[span *]
+									+e.show-more Подробнее
+										+icon('chevron-right')
+					+newsItem(8, "Реабилитация после инсульта")
+					+newsItem(9, "Питание после инфаркта")
+					+newsItem(10, "Жизнь после инфаркта")
+					+newsItem(11, "Профилактика повторного ишемического инсульта")
+					+newsItem(12, "Как жить после инсульта? Последствия инсульта")
+					+newsItem(13, "Симптомы острого инсульта")
+					+newsItem(14, "Что нужно знать об инсульте")
+					+newsItem(15, "Стабильная и нестабильная стенокардия: почему так важно знать разницу?")
+			a.btn-link.mb-40(href="#")(data-aos="fade-up" data-aos-duration="1000") Показать больше статей
+			.text
+				p #[span *] Таблетки кишечнорастворимые, покрытые пленочной оболочкой, 50 мг: 28 или 100 шт. Рег. №: П N013722/01 от 01.11.11 - Бессрочно<br>Дата перерегистрации: 25.08.21
+				p Таблетки кишечнорастворимые, покрытые пленочной оболочкой, 100 мг: 28 или 100 шт. Рег. №: П N013722/01 от 01.11.11 - Бессрочно<br>Дата перерегистрации: 25.08.21
+	+footer.bg()
+      
+
+
+

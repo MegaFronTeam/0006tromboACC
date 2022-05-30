@@ -1,0 +1,139 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Как распознать инсульт'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1= title
+	main.main-block.container
+		.inner-sp-x.slider-wrap
+			.main-title.text-start(data-aos="fade-up" data-aos-duration="1000")
+				h2 Как распознать инсульт
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				p 29&nbsp;ноября в&nbsp;Москве состоялась церемония награждения 7-й всероссийской премии Russian Pharma Awards<sup class="reg">&reg;</sup>. Эта награда считается беспристрастным отражением мнения российских врачей о&nbsp;лекарственных средствах и&nbsp;других продуктах фармацевтических компаний на&nbsp;российском рынке.
+				p Учредитель премии&nbsp;&mdash; крупнейшая в&nbsp;мире профессиональная социальная сеть для русскоязычных врачей &laquo;Доктор на&nbsp;работе&raquo;. В&nbsp;этом году в&nbsp;выборе лучших препаратов более чем в&nbsp;20&nbsp;номинациях приняли участие 550&nbsp;000 практикующих врачей.
+				p Премия состоит из&nbsp;4&nbsp;этапов: разработка списка номинаций, масштабное голосование среди врачей, аудит голосования и&nbsp;торжественная церемония награждения продуктов по&nbsp;каждой номинации.
+			+b.img-banner.border-block(data-aos="fade-up" data-aos-duration="1000")
+				+img("img/oldman.jpg").bg
+			.mb-40
+				h3.text-primary Как распознать инсульт
+				p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a.text-primary2(href="#") Donec non purus] venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			+b.custom-list--atricle(data-aos="fade-up" data-aos-duration="2000").mb-40
+				ul
+					li Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla;
+					li In posuere, augue eget ornare congue, eros ex bibendum:
+					li In finibus vitae lorem nec scelerisque;
+					li Phasellus eu aliquam ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet;
+					li Proin suscipit placerat turpis.
+			+b.img-banner.border-block(data-aos="fade-up" data-aos-duration="1000")
+				+img("img/oldman.jpg").bg
+			.mb-40.extra-indent(data-aos="fade-up" data-aos-duration="1000")
+				h6.text-primary H6 Header two line words description
+				.table-wrap
+					table.table
+						tr
+							th Maecenas
+							th Phasellus
+							th Gravida
+							th Integer
+						tr
+							td Nullam
+							td Tincidunt
+							td At elementum
+							td Dapibus
+						tr
+							td Luctus
+							td Mauris
+							td Felis
+							td Aenean
+						tr
+							td Dignissim
+							td Vestibulum
+							td Fusce
+							td Donec
+			.cite.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				p.text-primary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3.text-primary H3 Header two line words description
+				p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+				ol.numbered-list
+					li Nam luctus orci non suscipit mollis
+					li Proin suscipit placerat turpis, vitae fermentum turpis auctor vel
+						ol
+							li Donec scelerisque massa nec sapien tempus consectetur
+							li Morbi vehicula mauris neque
+					li Quisque aliquet nibh nec egestas faucibus
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h4.text-primary H4 Header two line words description
+				h5.text-primary H5 Header two line words description
+				p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				+b.mediaContent
+					+e.slider--js 
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								+e.slide.swiper-slide
+									+img('img/sArticleImg.jpg', 'bg')
+						+arrow()
+					p Description
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				+b.mediaContent
+					+e.video
+						<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			h3.text-primary2(data-aos="fade-up" data-aos-duration="1000") Читайте также:
+			+b.news-wrap--js(data-aos="fade-up" data-aos-duration="1000")
+				.swiper-wrapper
+					+e.news-item.swiper-slide(href="#")
+						+e.img-wrap
+							+img(`img/news-img-1.jpg`, 'bg')
+						+e.content
+							h4 Профилактика повторного ишемического инсульта
+							+e.show-more Подробнее
+								+icon('chevron-right')
+					+e.news-item.swiper-slide(href="#")
+						+e.img-wrap
+							+img(`img/news-img-2.jpg`, 'bg')
+						+e.content
+							h4 Жизнь после инфаркта
+							+e.show-more Подробнее
+								+icon('chevron-right')
+					+e.news-item.swiper-slide(href="#")
+						+e.img-wrap
+							+img(`img/news-img-3.jpg`, 'bg')
+						+e.content
+							h4 Как жить после инсульта? Последствия инсульта
+							+e.show-more Подробнее
+								+icon('chevron-right')
+					+e.news-item.swiper-slide(href="#")
+						+e.img-wrap
+							+img(`img/news-img-3.jpg`, 'bg')
+						+e.content
+							h4 Как жить после инсульта? Последствия инсульта
+							+e.show-more Подробнее
+								+icon('chevron-right')
+				+arrow()
+	+footer.bg()
