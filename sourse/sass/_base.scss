@@ -589,7 +589,9 @@ main{
 			color: $primary;
 		}
 	}
-	
+	&--faq {
+		max-width: rem(824);
+	}
 }
 
 
@@ -924,5 +926,135 @@ h5{
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 842px;
+	}
+}
+
+.faq-page {
+	.main-wrapper {
+		&:before {
+			background-color: #242E7F;
+		}
+	}
+}
+
+.dd-group {
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.faq-wrap {
+	.tabs {
+		&__caption {
+			display: flex;
+			border-radius: 8px;
+			border: 1px solid $primary;
+			overflow: hidden;
+		}
+		&__btn {
+			@include mt;
+			text-align: center;
+			font-weight: 700;
+			color: $primary;
+			padding: rem(6.5) rem(10);
+			width: 50%;
+			&.active, &:hover {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+	.dd-group {
+		&__item {
+			padding: rem(12) rem(16);
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
+				top: 0;
+				left: 0;
+				z-index: -1;
+				border-radius: 8px;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: calc(100% - 2px);
+				height: calc(100% - 2px);
+				left: 1px;
+				top: 1px;
+				z-index: -1;
+    		background-color: $white;
+				border-radius: 8px;
+			}
+			&.active {
+				.dd-group__head {
+					&:after {
+						transform: translateY(-50%) rotate(0);
+					}
+				}
+			}
+		}
+		&__head {
+			font-weight: 700;
+			padding-bottom: rem(2);
+			position: relative;
+			z-index: 2;
+			&:after, &:before {
+				@include mt;
+				position: absolute;
+				content: '';
+				display: block;
+				width: rem(12);
+				height: 1px;
+				right: rem(6);
+				top: 50%;
+				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
+			}
+			&:after {
+				transform: translateY(-50%) rotate(-90deg);
+			}
+			p {
+				padding-right: rem(20);
+				// @include media-breakpoint-down(lg) {
+				// 	max-width: rem(650);
+				// }
+				// @include media-breakpoint-down(md) {
+				// 	max-width: rem(450);
+				// }
+				// @include media-breakpoint-down(sm) {
+				// 	max-width: rem(246);
+				// }
+			}
+		}
+		&__content {
+			padding-top: rem(8);
+			position: relative;
+			margin-top: rem(12);
+			display: none;
+			&::before {
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
+				top: 0;
+				left: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			&.active {
+				display: block;
+			}
+		}
 	}
 }
