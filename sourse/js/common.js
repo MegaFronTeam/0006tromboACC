@@ -459,10 +459,10 @@ function eventHandler() {
 			},
 			
 		},
-		// pagination: {
-		// 	el: '.swiper-pagination',
-		// 	type: 'bullets',
-		// },
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
 	});
 
 };

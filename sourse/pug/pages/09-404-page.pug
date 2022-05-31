@@ -1,0 +1,41 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'wrongPage'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= '404'
+	title= title
+block pagecontent
+	//- +mob-mnu() 
+	//- +top-nav()
+	//- +headerBlock.bg
+	//- 	.text-center
+	//- 		h1= title
+	//- main.container.bg
+	+b.page404.bg-wrap.bg
+		+img('img/bg-404.jpg', 'bg').picture-bg
+		div(data-json="json/circles/data.json")
+		+e.text Тромбо АСС®
+		+e.wrap
+			+e.title 404
+			+e.content Страница не найдена. Она не существовала или срок публикации истёк.
+			a(href="#").btn.btn-white
+				span На главную 

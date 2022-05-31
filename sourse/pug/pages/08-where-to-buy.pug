@@ -1,0 +1,52 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Купить Тромбо АСС®'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1= title
+	main.main-block.container
+		.inner-sp-x.slider-wrap
+			.main-title(data-aos="fade-up" data-aos-duration="1000")
+				h2 Можно заказать онлайн
+			+b.marketplace(data-aos="fade-up" data-aos-duration="1000")
+				//- h2.text-primary.text-center Можно заказать онлайн
+				+e.row.row
+					mixin marketplaceItem(i)
+						.col-md-3.col-sm-4.col-6
+							+e.item(href="#")
+								+img(`img/marketplace-img-${i}.png`)
+					+marketplaceItem(1)
+					+marketplaceItem(2)
+					+marketplaceItem(3)
+					+marketplaceItem(4)
+			.main-title(data-aos="fade-up" data-aos-duration="1000")
+				h2.text-primary.text-center Где купить в моем городе?
+			+b.map(data-aos="fade-up" data-aos-duration="1000")
+				p Заказать в сервисе
+					+img('img/marketplace-img-1.png')
+	+footer.bg()

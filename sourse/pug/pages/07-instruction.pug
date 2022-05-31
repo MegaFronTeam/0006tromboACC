@@ -1,0 +1,117 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sFor/_sFor.pug
+include ../blocks/sLit/_sLit.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Инструкция по применению препарата Тромбо АСС®'
+	title= title
+block pagecontent
+	+mob-mnu() 
+	+top-nav()
+	+headerBlock.bg
+		.text-center
+			h1= title
+	main.main-block.container
+		.inner-sp-x.slider-wrap
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				+b.desc
+					p.fw-bold Регистрационный номер:
+					p П N013722/01
+				+b.desc
+					p.fw-bold Торговое название:
+					p Тромбо АСС®
+				+b.desc
+					p.fw-bold Группировочное наименование:
+					p ацетилсалициловая кислота
+				+b.desc
+					p.fw-bold Лекарственная форма:
+					p таблетки кишечнорастворимые, покрытые пленочной оболочкой
+				+b.desc
+					p.fw-bold Описание:
+					p Круглые, двояковыпуклые таблетки, белого цвета, покрытые пленочной оболочкой. Поверхность таблетки гладкая или слегка шероховатая, блестящая
+				+b.desc
+					p.fw-bold Фармакотерапевтическая группа:
+					p антиагрегантное средство.
+				+b.desc
+					p.fw-bold Код АТХ:
+					p В01АС06
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Фармакологическое действие
+				+ddGroup
+					+ddGroupItem('Фармакодинамика')
+						p Ацетилсалициловая кислота (АСК) представляет собой сложный эфир салициловой кислоты, относится к&nbsp;группе нестероидных противовоспалительных препаратов (НПВП). Механизм действия основан на&nbsp;необратимом ингибировании фермента циклооксигеназы (ЦОГ-1), в&nbsp;результате чего блокируется синтез простагландинов, простациклинов и&nbsp;тромбоксана. Уменьшает агрегацию, адгезию тромбоцитов и&nbsp;тромбообразование за&nbsp;счет подавления синтеза тромбоксана А2&nbsp;в тромбоцитах. Антиагрегантный эффект наиболее выражен в&nbsp;тромбоцитах, так как они неспособны повторно синтезировать циклооксигеназу. Антиагрегантный эффект развивается после применения малых доз препарата и&nbsp;сохраняется в&nbsp;течение 7&nbsp;суток после однократного приема.
+						<br>
+						p Эти свойства АСК используются в&nbsp;профилактике и&nbsp;лечении инфаркта миокарда, ишемической болезни сердца, осложнений варикозной болезни.
+						<br>
+						p Повышает фибринолитическую активность плазмы крови и&nbsp;снижает концентрацию витамин К-зависимых факторов свертывания (II, VII, IX, X). АСК оказывает также противовоспалительное, жаропонижающее и&nbsp;анальгезирующее действие.
+					+ddGroupItem('Фармакодинамика')
+						p Ацетилсалициловая кислота (АСК) представляет собой сложный эфир салициловой кислоты, относится к&nbsp;группе нестероидных противовоспалительных препаратов (НПВП). Механизм действия основан на&nbsp;необратимом ингибировании фермента циклооксигеназы (ЦОГ-1), в&nbsp;результате чего блокируется синтез простагландинов, простациклинов и&nbsp;тромбоксана. Уменьшает агрегацию, адгезию тромбоцитов и&nbsp;тромбообразование за&nbsp;счет подавления синтеза тромбоксана А2&nbsp;в тромбоцитах. Антиагрегантный эффект наиболее выражен в&nbsp;тромбоцитах, так как они неспособны повторно синтезировать циклооксигеназу. Антиагрегантный эффект развивается после применения малых доз препарата и&nbsp;сохраняется в&nbsp;течение 7&nbsp;суток после однократного приема.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Показания к применению
+				+ddGroup
+					+ddGroupItem('Показания к применению')
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, tempore. Qui dicta omnis distinctio suscipit minus maxime, hic numquam exercitationem quae cumque. Cumque officia, quo possimus voluptas aperiam vitae expedita incidunt eligendi adipisci! Ipsum corrupti fugiat atque dolorem vero. Quae, culpa nobis impedit id dignissimos facilis. Inventore quibusdam sit omnis.
+					+ddGroupItem('Противопоказания')
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias error, cumque laudantium suscipit obcaecati. Sit quo animi corporis quidem similique ea maiores consequatur blanditiis voluptatibus, omnis laudantium porro nulla eligendi? Assumenda sed deserunt quidem, voluptates voluptatum, molestias dolorum libero ratione alias, quo officiis nesciunt eaque doloribus reprehenderit fuga qui.
+					+ddGroupItem('С осторожностью')
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias error, cumque laudantium suscipit obcaecati. Sit quo animi corporis quidem similique ea maiores consequatur blanditiis voluptatibus, omnis laudantium porro nulla eligendi? Assumenda sed deserunt quidem, voluptates voluptatum, molestias dolorum libero ratione alias, quo officiis nesciunt eaque doloribus reprehenderit fuga qui.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Применение при беременности
+				+ddGroup
+					+ddGroupItem('Применение при беременности')
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias error, cumque laudantium suscipit obcaecati. Sit quo animi corporis quidem similique ea maiores consequatur blanditiis voluptatibus, omnis laudantium porro nulla eligendi? Assumenda sed deserunt quidem, voluptates voluptatum, molestias dolorum libero ratione alias, quo officiis nesciunt eaque doloribus reprehenderit fuga qui.
+					+ddGroupItem('Применение в период грудного вскармливания')
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias error, cumque laudantium suscipit obcaecati. Sit quo animi corporis quidem similique ea maiores consequatur blanditiis voluptatibus, omnis laudantium porro nulla eligendi? Assumenda sed deserunt quidem, voluptates voluptatum, molestias dolorum libero ratione alias, quo officiis nesciunt eaque doloribus reprehenderit fuga qui.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Способ применения и дозы
+				+ddGroup
+					+ddGroupItem('Способ применения и дозы')
+						p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, blanditiis, eligendi porro tenetur qui harum dolor, unde excepturi nam delectus laborum? Animi quae quod fugiat labore dolore sapiente rerum quia sed hic esse dicta illum ut dolorem vitae, aperiam nulla iste eos adipisci incidunt delectus commodi beatae dolores eum? Dicta?
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Побочное действие
+				+ddGroup
+					+ddGroupItem('Побочное действие')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias obcaecati, vitae provident nobis, debitis aliquam mollitia distinctio vero nam ipsam accusantium reiciendis quos dolor autem porro tempora, aliquid labore nulla? Distinctio sunt dignissimos eveniet non saepe modi quos iure fugit ad, dolorem excepturi quas similique ipsum! Quaerat, autem aliquid.
+					+ddGroupItem('Передозировка')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias obcaecati, vitae provident nobis, debitis aliquam mollitia distinctio vero nam ipsam accusantium reiciendis quos dolor autem porro tempora, aliquid labore nulla? Distinctio sunt dignissimos eveniet non saepe modi quos iure fugit ad, dolorem excepturi quas similique ipsum! Quaerat, autem aliquid.
+					+ddGroupItem('Взаимодействие с другими лекарственными средствами')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias obcaecati, vitae provident nobis, debitis aliquam mollitia distinctio vero nam ipsam accusantium reiciendis quos dolor autem porro tempora, aliquid labore nulla? Distinctio sunt dignissimos eveniet non saepe modi quos iure fugit ad, dolorem excepturi quas similique ipsum! Quaerat, autem aliquid.
+					+ddGroupItem('Особые указания')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias obcaecati, vitae provident nobis, debitis aliquam mollitia distinctio vero nam ipsam accusantium reiciendis quos dolor autem porro tempora, aliquid labore nulla? Distinctio sunt dignissimos eveniet non saepe modi quos iure fugit ad, dolorem excepturi quas similique ipsum! Quaerat, autem aliquid.
+					+ddGroupItem('Влияние на способность управления транспортными средствами и механизмами')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias obcaecati, vitae provident nobis, debitis aliquam mollitia distinctio vero nam ipsam accusantium reiciendis quos dolor autem porro tempora, aliquid labore nulla? Distinctio sunt dignissimos eveniet non saepe modi quos iure fugit ad, dolorem excepturi quas similique ipsum! Quaerat, autem aliquid.
+			.mb-40(data-aos="fade-up" data-aos-duration="1000")
+				h3 Общие сведения
+				+ddGroup
+					+ddGroupItem('Форма выпуска')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+					+ddGroupItem('Условия хранения')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+					+ddGroupItem('Срок годности')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+					+ddGroupItem('Условия отпуска')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+					+ddGroupItem('Владелец регистрационного удостоверения')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+					+ddGroupItem('Производитель')
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit doloribus non vel eos id, voluptatem enim optio laudantium aliquam, repellendus beatae ipsa commodi eum voluptas magni! Optio vel magnam numquam a magni, voluptatum cumque et fugiat id sed quasi, quos nisi perspiciatis quas officia ducimus repudiandae eaque laudantium dicta. Cumque.
+			+b.gradient-btn(href="#") Скачать  инструкцию
+	+footer.bg()

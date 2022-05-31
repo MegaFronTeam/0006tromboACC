@@ -958,6 +958,9 @@ h5{
 
 .faq-wrap {
 	padding-top: rem(3);
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem(24);
+	}
 	.tabs {
 		&__caption {
 			display: flex;
@@ -978,98 +981,98 @@ h5{
 			}
 		}
 	}
-	.dd-group {
-		&__item {
-			padding: rem(12) rem(16);
-			position: relative;
-			&:not(:last-child) {
-				margin-bottom: rem(8);
-			}
-			&:before {
-				content: '';
-				position: absolute;
-				display: block;
-				width: 100%;
-				height: 100%;
-				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
-				top: 0;
-				left: 0;
-				z-index: -1;
-				border-radius: 8px;
-			}
-			&:after {
-				content: '';
-				position: absolute;
-				display: block;
-				width: calc(100% - 2px);
-				height: calc(100% - 2px);
-				left: 1px;
-				top: 1px;
-				z-index: -1;
-    		background-color: $white;
-				border-radius: 8px;
-			}
-			&.active {
-				.dd-group__head {
-					&:after {
-						transform: translateY(-50%) rotate(0);
-					}
+}
+.dd-group {
+	&__item {
+		padding: rem(12) rem(16);
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
+			top: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: 8px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% - 2px);
+			height: calc(100% - 2px);
+			left: 1px;
+			top: 1px;
+			z-index: -1;
+			background-color: $white;
+			border-radius: 8px;
+		}
+		&.active {
+			.dd-group__head {
+				&:after {
+					transform: translateY(-50%) rotate(0);
 				}
 			}
 		}
-		&__head {
-			font-weight: 700;
-			padding-bottom: rem(2);
-			position: relative;
-			z-index: 2;
-			cursor: pointer;
-			&:after, &:before {
-				@include mt;
-				position: absolute;
-				content: '';
-				display: block;
-				width: rem(12);
-				height: 1px;
-				right: rem(6);
-				top: 50%;
-				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
-			}
-			&:after {
-				transform: translateY(-50%) rotate(-90deg);
-			}
-			p {
-				padding-right: rem(20);
-				// @include media-breakpoint-down(lg) {
-				// 	max-width: rem(650);
-				// }
-				// @include media-breakpoint-down(md) {
-				// 	max-width: rem(450);
-				// }
-				// @include media-breakpoint-down(sm) {
-				// 	max-width: rem(246);
-				// }
-			}
+	}
+	&__head {
+		font-weight: 700;
+		padding-bottom: rem(2);
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+		&:after, &:before {
+			@include mt;
+			position: absolute;
+			content: '';
+			display: block;
+			width: rem(12);
+			height: 1px;
+			right: rem(6);
+			top: 50%;
+			background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
 		}
-		&__content {
-			padding-top: rem(8);
-			position: relative;
-			margin-top: rem(12);
-			display: none;
-			&::before {
-				position: absolute;
-				content: '';
-				width: 100%;
-				height: 1px;
-				background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
-				top: 0;
-				left: 0;
-			}
-			p {
-				margin-bottom: 0;
-			}
-			&.active {
-				display: block;
-			}
+		&:after {
+			transform: translateY(-50%) rotate(-90deg);
+		}
+		p {
+			padding-right: rem(20);
+			// @include media-breakpoint-down(lg) {
+			// 	max-width: rem(650);
+			// }
+			// @include media-breakpoint-down(md) {
+			// 	max-width: rem(450);
+			// }
+			// @include media-breakpoint-down(sm) {
+			// 	max-width: rem(246);
+			// }
+		}
+	}
+	&__content {
+		padding-top: rem(8);
+		position: relative;
+		margin-top: rem(12);
+		display: none;
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-image: linear-gradient(90deg,#0066cb .57%,#cb183b 100.57%);
+			top: 0;
+			left: 0;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		&.active {
+			display: block;
 		}
 	}
 }
@@ -1077,6 +1080,10 @@ h5{
 .news-btns {
 	text-align: center;
 	margin-bottom: rem(31);
+	padding-top: rem(3);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(12);
+	}
 	&__btn {
 		color: $primary2;
 		font-weight: 700;
@@ -1157,6 +1164,10 @@ h5{
 	}
 	&--js {
 		position: relative;
+		padding-bottom: rem(16);
+		@include media-breakpoint-down(md) {
+			padding-bottom: rem(24);
+		}
 		@include media-breakpoint-up(sm) {
 			&:before, &:after {
 				content: '';
@@ -1195,6 +1206,13 @@ h5{
 			}
 			.icon {
 				font-size: rem(24);
+			}
+		}
+		.swiper-pagination {
+			display: none;
+			@include media-breakpoint-down(md) {
+				bottom: rem(-8);
+				display: block;
 			}
 		}
 	}
@@ -1389,6 +1407,7 @@ h5{
 	&__slider {
 		overflow: hidden;
 		border-radius: 8px;
+		position: relative;
 		@include media-breakpoint-up(md) {
 			border-radius: 20px;
 		}
@@ -1416,12 +1435,184 @@ h5{
 			border-radius: 40px;
 			margin-bottom: rem(16);
 		}
+		@include media-breakpoint-down(md) {
+			--ratio: 184.5/328;
+		}
 		iframe {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+		}
+	}
+}
+
+.desc {
+	&:first-child {
+		@include media-breakpoint-up(md) {
+			padding-top: rem(11);
+		}
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(15);
+	}
+	p {
+		display: contents;
+		margin-bottom: 0;
+	}
+}
+
+.gradient-btn {
+	@include mt;
+	background-image: linear-gradient(90deg, #137EE7 0.57%, #C2418F 50.05%, #EF1A4D 100.57%);
+	border-radius: 52px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: $white;
+	font-size: rem(16);
+	padding: rem(12) rem(10);
+	&:hover {
+		color: $white;
+		box-shadow: -2px -3px 12px 2px #1e1c1c38;
+	}
+	@include media-breakpoint-down(sm) {
+		max-width: rem(242);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.marketplace {
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(54);
+	}
+	h2 {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(48);
+		}
+	}
+	&__row {
+		max-width: rem(800);
+		margin-left: auto;
+		margin-right: auto;
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(16)};
+		}
+	}
+	&__item {
+		padding: rem(30) rem(18);
+		border: 1px solid rgba(30, 118, 226, 0.5);
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    text-align: center;
+		height: 100%;
+		img {
+			width: 100%;
+		}
+		&:hover {
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
+		}
+	}
+}
+
+.map {
+	p {
+		padding-top: rem(8);
+		font-weight: 700;
+		font-size: rem(16);
+		text-align: center;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		img {
+			width: 91px;
+			margin-left: rem(8);
+		}
+	}
+}
+
+.page404 {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	div[data-json="json/circles/data.json"] {
+		position: absolute;
+    z-index: -1;
+	}
+	&__text {
+		position: absolute;
+		top: 32px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+		font-weight: 700;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background-image: linear-gradient(194.97deg, rgba(226, 0, 41, 0) 10.52%, rgba(201, 0, 60, 0.9) 66.33%);
+	}
+	&__wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		flex-direction: column;
+		z-index: 2;
+		height: 100%;
+		color: $white;
+		a {
+			width: 100%;
+			max-width: rem(296);
+			margin-left: auto;
+			margin-right: auto;
+			padding: rem(9.5) rem(10);
+			span {
+				background: linear-gradient(90deg, #0066CB 0.57%, #CB183B 100.57%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+	}
+	&__title {
+		// @include rfs(216px);
+		font-size: rem(155);
+		font-weight: 700;
+		line-height: 1em;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(216);
+		}
+	}
+	&__content {
+		max-width: rem(518);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(24);
+		text-align: center;
+	}
+}
+
+.wrongPage {
+	.main-wrapper {
+		padding-bottom: 0;
+		padding-top: 0;
+		&::before {
+			content: unset;
 		}
 	}
 }
