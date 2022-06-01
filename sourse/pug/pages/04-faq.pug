@@ -17,7 +17,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'faq-page'
+	- let  mainPage= 'faq-page page-not-fixed-footer'
 	- let  bg= 'main.jpg'
 
 block title
@@ -29,7 +29,7 @@ block pagecontent
 	+headerBlock.bg
 		.text-center
 			h1= title
-	main.main-block.main-block--faq.container
+	main.main-block.container
 		.inner-sp-x
 			+b.faq-wrap.tabs(data-aos="fade-up" data-aos-duration="1000")
 				.tabs__caption.mb-4
@@ -65,7 +65,7 @@ block pagecontent
 							p Тестирование Вы&nbsp;можете пройти в&nbsp;разделе &laquo;Тестирование&raquo;, кликнув на&nbsp;блок МЕНЮ в&nbsp;верхнем левом углу. После чего откроется тест, где вам нужно внести все необходимые данные и&nbsp;заполнить поля. Обращаем ваше внимание, что для получения более точных данных мы&nbsp;рекомендуем обратиться к&nbsp;врачу.
 						+ddGroupItem('Чем отличаются разные препараты ацетилсалициловой кислоты?')
 							p Тестирование Вы&nbsp;можете пройти в&nbsp;разделе &laquo;Тестирование&raquo;, кликнув на&nbsp;блок МЕНЮ в&nbsp;верхнем левом углу. После чего откроется тест, где вам нужно внести все необходимые данные и&nbsp;заполнить поля. Обращаем ваше внимание, что для получения более точных данных мы&nbsp;рекомендуем обратиться к&nbsp;врачу.
-	+footer.bg()
+	+footer.bg
       
 
 

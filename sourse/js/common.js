@@ -492,7 +492,7 @@ if (document.readyState !== 'loading') {
 				let header = document.querySelector('.headerBlock');
 				let footer = document.querySelector('.footer');
 				if (!header) return;
-				window.scrollY > hh * 1.2
+				window.scrollY > hh
 					? (document.body.classList.add('show-footer'))
 					: document.body.classList.remove('show-footer');
 			}
