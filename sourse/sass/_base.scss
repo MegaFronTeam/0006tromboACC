@@ -1543,6 +1543,12 @@ h5{
 		@include block(1056,636);
 		border-radius: 20px;
 		background-color: $gray-100;
+		@include media-breakpoint-down(sm) {
+			--ratio: 450/342;
+		}
+		@include media-breakpoint-up(lg) {
+			margin: 0 -16px;
+		}
 		#map {
 			position: absolute;
 			width: 100%;
