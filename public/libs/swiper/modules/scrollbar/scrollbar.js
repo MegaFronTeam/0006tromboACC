@@ -25,8 +25,7 @@ export default function Scrollbar(_ref) {
       draggable: false,
       snapOnRelease: true,
       lockClass: 'swiper-scrollbar-lock',
-      dragClass: 'swiper-scrollbar-drag',
-      scrollbarDisabledClass: 'swiper-scrollbar-disabled'
+      dragClass: 'swiper-scrollbar-drag'
     }
   });
   swiper.scrollbar = {
@@ -252,7 +251,6 @@ export default function Scrollbar(_ref) {
       support
     } = swiper;
     const $el = scrollbar.$el;
-    if (!$el) return;
     const target = $el[0];
     const activeListener = support.passiveListener && params.passiveListeners ? {
       passive: false,
@@ -277,12 +275,12 @@ export default function Scrollbar(_ref) {
   }
 
   function enableDraggable() {
-    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+    if (!swiper.params.scrollbar.el) return;
     events('on');
   }
 
   function disableDraggable() {
-    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+    if (!swiper.params.scrollbar.el) return;
     events('off');
   }
 
@@ -330,14 +328,9 @@ export default function Scrollbar(_ref) {
   }
 
   on('init', () => {
-    if (swiper.params.scrollbar.enabled === false) {
-      // eslint-disable-next-line
-      disable();
-    } else {
-      init();
-      updateSize();
-      setTranslate();
-    }
+    init();
+    updateSize();
+    setTranslate();
   });
   on('update resize observerUpdate lock unlock', () => {
     updateSize();
@@ -360,32 +353,7 @@ export default function Scrollbar(_ref) {
   on('destroy', () => {
     destroy();
   });
-
-  const enable = () => {
-    swiper.$el.removeClass(swiper.params.scrollbar.scrollbarDisabledClass);
-
-    if (swiper.scrollbar.$el) {
-      swiper.scrollbar.$el.removeClass(swiper.params.scrollbar.scrollbarDisabledClass);
-    }
-
-    init();
-    updateSize();
-    setTranslate();
-  };
-
-  const disable = () => {
-    swiper.$el.addClass(swiper.params.scrollbar.scrollbarDisabledClass);
-
-    if (swiper.scrollbar.$el) {
-      swiper.scrollbar.$el.addClass(swiper.params.scrollbar.scrollbarDisabledClass);
-    }
-
-    destroy();
-  };
-
   Object.assign(swiper.scrollbar, {
-    enable,
-    disable,
     updateSize,
     setTranslate,
     init,

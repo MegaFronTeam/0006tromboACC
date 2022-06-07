@@ -1,7 +1,7 @@
 // start .sSteps
 .sSteps {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(5)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-down(md){
 			padding-left: calc(80px - var(--cx));
