@@ -600,6 +600,10 @@ main{
 		z-index: 11;
 
 	}
+	.headerBlock {
+		background-color: #242e7f;
+	}
+
 }
 
 .main-wrapper{
@@ -1601,6 +1605,7 @@ h5{
 	div[data-json="json/circles/data.json"] {
 		position: absolute;
     z-index: -1;
+		height: 100%;
 	}
 	&__text {
 		position: absolute;
