@@ -32,7 +32,8 @@ block pagecontent
 	//- main.container.bg
 	+b.page404.bg-wrap.bg
 		+img('img/bg-404.jpg', 'bg').picture-bg
-		div(data-json="json/circles/data.json")
+		div(data-json="json/circles/data.json").d-none.d-md-block
+		div(data-json="json/circles_mobile/data.json").d-md-none
 		+e.text Тромбо АСС®
 		+e.wrap
 			+e.title 404
