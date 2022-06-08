@@ -600,6 +600,10 @@ main{
 		z-index: 11;
 
 	}
+	.headerBlock {
+		background-color: #242e7f;
+	}
+
 }
 
 .main-wrapper{
@@ -746,6 +750,26 @@ h5{
 }
 
 .custom-list{
+	p {
+		font-size: rem(18);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(20);
+			margin-bottom: rem(27);
+		}
+	}
+	h4 {
+		font-size: rem(16);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+		}
+	}
+	ul {
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(46);
+		}
+	}
 	li{
 		margin-bottom: rem(16);
 		position: relative;
@@ -820,6 +844,9 @@ h5{
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 22px;
+	@include media-breakpoint-down(sm) {
+		flex-direction: column;
+	}
 	&__btn{
 		margin-bottom: 10px;
 		justify-content: space-between;
@@ -827,14 +854,20 @@ h5{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 20px;
+		font-size: 18px;
 		border-radius: 8px;
 		flex-grow: 1;
+		@include media-breakpoint-up(lg) {
+			font-size: 20px;
+		}
 		&::after{
 			border-radius: 6px;
 		}
 		.icon{
-			font-size: 24px;
+			font-size: 16px;
+			@include media-breakpoint-up(lg) {
+				font-size: 24px;
+			}
 		}
 
 	}
@@ -1572,10 +1605,14 @@ h5{
 	[data-json] {
 		position: absolute;
     z-index: -1;
+<<<<<<< HEAD
 		width: 100%;
 		height: 100%;
 		left: 0;
 		top: 0;
+=======
+		height: 100%;
+>>>>>>> 1dc1b5082c7e0d399947340afca02f6625f5f662
 	}
 	&__text {
 		position: absolute;
@@ -1658,5 +1695,11 @@ h5{
 		opacity: 1 !important; 
     visibility: visible !important;
     z-index: 2 !important;
+	}
+}
+
+h2 {
+	@include media-breakpoint-down(sm) {
+		font-weight: 400;
 	}
 }
