@@ -2,7 +2,8 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
 		+img('img/bg.jpg','bg').picture-bg
-		div(data-json="json/circles/data.json")
+		div(data-json="json/circles/data.json").d-none.d-md-block
+		div(data-json="json/circles_mobile/data.json").d-md-none
 		.container
 			if block
 				block

@@ -95,7 +95,8 @@
 			<!-- end top-nav-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section bg-wrap bg" id="headerBlock"><img class="object-fit-js picture-bg" src="img/bg.jpg" alt="" loading="lazy"/>
-				<div data-json="json/circles/data.json"></div>
+				<div class="d-none d-md-block" data-json="json/circles/data.json"></div>
+				<div class="d-md-none" data-json="json/circles_mobile/data.json"></div>
 				<div class="container">
 					<div class="text-center">
 						<h1>Как распознать инсульт</h1>
@@ -285,7 +286,9 @@
 				</div>
 			</main>
 			<footer class="footer bg-wrap"><img class="object-fit-js picture-bg" src="img/footer-bg.jpg" alt="" loading="lazy"/>
-				<div class="animate-block" data-json="json/circles/data.json">
+				<div class="animate-block d-none d-md-block" data-json="json/circles/data.json">
+				</div>
+				<div class="animate-block d-md-none" data-json="json/circles_mobile/data.json">
 				</div>
 				<div class="container">
 					<div class="footer__row row">
