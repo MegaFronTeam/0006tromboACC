@@ -1,6 +1,6 @@
 // start .sSteps
 .sSteps {
-	--sPT: #{rem(30)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(5)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-down(md){
