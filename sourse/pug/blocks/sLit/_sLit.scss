@@ -24,6 +24,9 @@
 	&__item{
 
 	}
+	ol + &__small-text{
+		// margin-top: -.rem;
+	}
 	ol{
 		padding-left: rem(14);
 	}
@@ -31,6 +34,19 @@
 		color: #999EAB;
 		font-size: 14px;
 		line-height: calc(18 / 14);
+		margin-bottom: 0.4rem;
+	}
+	&__small-text{
+		font-size: rem(14);
+		padding-left: rem(14);
+		position: relative;
+		color: #999EAB;
+		&::before{
+			content: '*';
+			position: absolute;
+			left: 0;
+			color: $primary;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}

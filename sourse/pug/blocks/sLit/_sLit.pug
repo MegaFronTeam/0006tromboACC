@@ -1,4 +1,4 @@
-mixin sLit(data)
+mixin sLit(small)
 	// start sLit
 	+b.SECTION.sLit.section#sLit&attributes(attributes) 
 		+b.section-title(data-aos="fade-up" data-aos-duration="2500")
@@ -11,5 +11,6 @@ mixin sLit(data)
 				li Газизов Р.М., Ацель Е.А. Применение ацетилсалициловой кислоты для первичной и&nbsp;вторичной профилактики сердечно-сосудистых заболеваний. РМЖ. Медицинское обозрение.&nbsp;2014;11:827-831.
 				li Welsh R.C., Roe M.T., Steg P.G., et&nbsp;al. A&nbsp;critical reappraisal of&nbsp;aspirin for secondary prevention in&nbsp;patients with ischemic heart disease // Am. Heart J. &mdash;&nbsp;2016. &mdash;&nbsp;&#8470;&nbsp;181. &mdash;&nbsp;P. 92-100
 				li Lotrionte&nbsp;M. et&nbsp;al. Which Aspirin Dose and Preparation Is&nbsp;Best for the Long-Term Prevention of&nbsp;Cardiovascular Disease and Cancer? Evidence From a&nbsp;Systematic Review and Network Meta-Analysis. Prog Cardiovasc Dis. Mar-Apr 2016;58(5):495-504
-
+		if small
+			+e.small-text= small
 	// end sLit
