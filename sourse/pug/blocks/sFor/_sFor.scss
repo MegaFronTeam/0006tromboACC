@@ -60,6 +60,11 @@
 		margin-bottom: rem(24);
 		max-width: rem(416);
 		line-height: calc(24 / 18);
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
 	}
 	h2{
 		@extend .h5;

@@ -60,6 +60,11 @@
 
 	}
 	&__center-block{
+		@include media-breakpoint-down(sm) {
+			max-width: 96%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		@include media-breakpoint-up(md) {
 
 			display: flex;

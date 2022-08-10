@@ -94,14 +94,14 @@
 		text-align: center;
 		// justify-content: center;
 		align-items: center;
-		&:not(:hover) &__title{
-	
-			color: $body-color;
-		}
 		&:hover{
 			--op:1;
-	
+			
 		}
+	}
+	&:not(:hover) &__title{
+		
+		color: $body-color;
 	}
 	min-height: 100%;
 	padding-top: 14px;
