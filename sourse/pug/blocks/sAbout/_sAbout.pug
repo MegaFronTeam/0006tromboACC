@@ -12,7 +12,14 @@ mixin sAbout(data)
 		+e.banner.bg-wrap(data-aos="fade-up" data-aos-duration="2000")
 			+e.inner
 				+img('img/banner-bg.jpg').picture-bg
-				h5 Препарат Тромбо<sup class="reg">&reg;</sup> АСС выпускается в&nbsp;дозировках 50&nbsp;и&nbsp;100&nbsp;мг, которые подходят для длительного применения, производится в&nbsp;Австрии, имеет доступную цену при высоком качестве
+				//- h5 Препарат Тромбо<sup class="reg">&reg;</sup> АСС выпускается в&nbsp;дозировках 50&nbsp;и&nbsp;100&nbsp;мг, которые подходят для длительного применения, производится в&nbsp;Австрии, имеет доступную цену при высоком качестве
+				+e.wrap
+					h5 Тромбо<sup class="reg">&reg;</sup> АСС это
+					ul
+						li Удобно&mdash; выпускается в&nbsp;специяльных кардиологических дозировках 50&nbsp;и&nbsp;100&nbsp;мг
+						li Подходит для длительного приема
+						li Надежно&mdash; производится в&nbsp;Австрии
+						li Доступно&mdash; имеет демократичную цену
 				.d-none.d-md-block
 					+img('img/banner-img.png')
 	// end sAbout

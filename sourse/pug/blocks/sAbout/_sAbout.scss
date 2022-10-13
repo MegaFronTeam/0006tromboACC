@@ -74,7 +74,7 @@
 		@include media-breakpoint-down(md) {
 			padding-left: 32px;
 			padding-right: 32px;
-			text-align: center;
+			// text-align: center;
 		} 
 		// overflow: hidden;
 		.picture-bg {
@@ -97,14 +97,46 @@
 		h5{
 			color: #fff;
 			font-weight: normal;
+			font-weight: 700;
+			margin-bottom: 0;
 			@include media-breakpoint-up(md) {
 
 				max-width: 500px;
 			}
-			font-weight: normal;
+			// font-weight: normal;
 			align-self: center;
-			padding-top: 50px;
-			padding-bottom: 45px;
+			padding-top: rem(32);
+			padding-bottom: rem(8);
+		}
+	}
+	&__wrap {
+		// h5 {
+		// 	color: #fff;
+		// 	padding-bottom: rem(8);
+		// }
+		ul {
+			list-style-type: none;
+			max-width: rem(356);
+			li {
+				position: relative;
+				padding-left: rem(22);
+				font-size: rem(14);
+				color: #fff;
+				&:not(:last-child) {
+					margin-bottom: rem(4);
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 3px;
+					height: 3px;
+					border-radius: 50%;
+					background-color: #fff;
+					left: 9px;
+					top: 8px;
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

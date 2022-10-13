@@ -785,6 +785,8 @@ h5{
 		margin-bottom: rem(16);
 		position: relative;
 		list-style: none;
+		display: inline-block;
+		width: 100%;
 		@include media-breakpoint-up(lg){
 
 			padding-left: rem(34);
@@ -805,7 +807,8 @@ h5{
 		--icon: url("../img/svg/stethoscope.svg")
 	}
 	&--tablet{
-		--icon: url("../img/svg/tablet.svg")
+		// --icon: url("../img/svg/tablet.svg")
+		--icon: url("../img/svg/pill.svg")
 	}
 }
 
@@ -1010,26 +1013,29 @@ h5{
 	@include media-breakpoint-up(md) {
 		padding-bottom: rem(24);
 	}
-	.tabs {
-		&__caption {
-			display: flex;
-			border-radius: 8px;
-			border: 1px solid $primary;
-			overflow: hidden;
-		}
-		&__btn {
-			@include mt;
-			text-align: center;
-			font-weight: 700;
-			color: $primary;
-			padding: rem(6.5) rem(10);
-			width: 50%;
-			&.active, &:hover {
-				background-color: $primary;
-				color: $white;
-			}
-		}
+	&__btn {
+		@include mt;
+		text-align: center;
+		font-weight: 700;
+		color: $primary;
+		padding: rem(6.5) rem(10);
+		width: 100%;
+		border: 1px solid $primary;
+		border-radius: 8px;
+		margin-bottom: rem(24);
+		// &.active, &:hover {
+		// 	background-color: $primary;
+		// 	color: $white;
+		// }
 	}
+	// .tabs {
+	// 	&__caption {
+	// 		display: flex;
+	// 		border-radius: 8px;
+	// 		border: 1px solid $primary;
+	// 		overflow: hidden;
+	// 	}
+	// }
 }
 .dd-group {
 	&__item {

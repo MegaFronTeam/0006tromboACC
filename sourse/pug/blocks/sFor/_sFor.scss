@@ -4,6 +4,9 @@
 	margin-right: auto;
 	max-width: rem(912);
 	--sPT: #{rem(45)};
+	&--2 {
+		max-width: none;
+	}
 	h2{
 		margin-bottom: rem(16);
 	}
@@ -75,7 +78,10 @@
 			font-size: rem(20);
 		}
 	}
-
+	p {
+		font-size: rem(18) !important;
+		margin-bottom: rem(40) !important;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
